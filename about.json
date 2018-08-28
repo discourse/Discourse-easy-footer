@@ -1,5 +1,6 @@
 {
   "name": "Easy Footer",
   "about_url": "https://meta.discourse.org/t/",
+  "component": true,
   "license_url": "https://github.com/hnb-ku/Discourse-easy-footer/blob/master/LICENSE"
 }
