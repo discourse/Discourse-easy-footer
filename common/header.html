@@ -27,7 +27,8 @@ $(document).ready(function() {
     rawMain = "",
     mainUl = "",
     socUl = "",
-    footerUl = "";
+    footerUl = "",
+    parentBase = "";
 
   sec = $.map(settings.Link_sections.split("|"), $.trim);
   seg = $.map(settings.Links.split("|"), $.trim);
@@ -45,19 +46,23 @@ $(document).ready(function() {
       '">' +
       sec[0] +
       '</span><div id="' +
-      sec[0] +
+      klass +
       '"><ul></ul></div></div>';
   });
 
   $(".custom-footer .links").html(rawMain);
 
   $.each(sec, function() {
-    var sec = $.map(this.split(","), $.trim);
-    mainUl = $("#" + sec[0] + " ul").html();
+    var sec = $.map(this.split(","), $.trim),
+      parentBase = sec[0].replace(/\s+/g, "-").toLowerCase(),
+      mainUl = $("#" + parentBase + " ul").html();
+
     $.each(seg, function() {
-      var seg = $.map(this.split(","), $.trim);
-      klass = seg[1];
-      if (sec[0] == seg[0]) {
+      var seg = $.map(this.split(","), $.trim),
+        parentForItem = seg[0].replace(/\s+/g, "-").toLowerCase(),
+        klass = seg[1].replace(/\s+/g, "-").toLowerCase();
+
+      if (parentBase == parentForItem) {
         if (seg[3] == "blank") {
           seg[3] = "_blank";
           klass += " blank ";
@@ -79,7 +84,7 @@ $(document).ready(function() {
           '">' +
           seg[1] +
           "</li>";
-        $("#" + sec[0] + " ul").html(mainUl);
+        $("#" + parentBase + " ul").html(mainUl);
       }
     });
   });
