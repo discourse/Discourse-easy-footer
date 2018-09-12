@@ -117,6 +117,11 @@ $(document).ready(function() {
   $.each(fot, function() {
     var fot = $.map(this.split(","), $.trim);
     klass = fot[0].replace(/\s+/g, "-").toLowerCase();
+    if (seg[2] == "blank") {
+      target = "_blank";
+    } else {
+      target = "";
+    }
     footerUl +=
       '<a class="small-link ' +
       klass +
@@ -125,7 +130,7 @@ $(document).ready(function() {
       '" href="' +
       fot[1] +
       '" target="' +
-      fot[2] +
+      target +
       '">' +
       fot[0] +
       "</a>";
