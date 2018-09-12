@@ -60,7 +60,7 @@ $(document).ready(function() {
     $.each(seg, function() {
       var seg = $.map(this.split(","), $.trim),
         parentForItem = seg[0].replace(/\s+/g, "-").toLowerCase(),
-        klass = seg[1].replace(/\s+/g, "-").toLowerCase();
+        klass = seg[1];
 
       if (parentBase == parentForItem) {
         if (seg[3] == "blank") {
@@ -123,9 +123,9 @@ $(document).ready(function() {
       '" title="' +
       fot[1] +
       '" href="' +
-      fot[2] +
+      fot[1] +
       '" target="' +
-      fot[3] +
+      fot[2] +
       '">' +
       fot[0] +
       "</a>";
