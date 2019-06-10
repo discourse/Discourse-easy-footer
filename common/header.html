@@ -3,10 +3,10 @@
   <div class="flexbox">
     <div class="first-box">
       <div class="heading">
-        {{themeSettings.Heading}}
+        {{theme-setting 'Heading'}}
       </div>
       <div class="blurb">
-        {{themeSettings.Blurb}}
+        {{theme-setting 'Blurb'}}
       </div>
     </div>
     <div class="second-box">
@@ -20,7 +20,9 @@
 </div>
 </script>
 
-<script type="text/discourse-plugin" version="0.8.23">
+<script type="text/discourse-plugin" version="0.8.25">
+const { iconHTML } = require("discourse-common/lib/icon-library");
+
 $(document).ready(function() {
   let sec = "",
     seg = "",
@@ -92,6 +94,8 @@ $(document).ready(function() {
   $.each(soc, function() {
     var soc = $.map(this.split(","), $.trim);
     klass = soc[0].replace(/\s+/g, "-").toLowerCase();
+    iconName = soc[4] || soc[0].toLowerCase();
+
     if (soc[3] == "blank") {
       target = "_blank";
     } else {
@@ -106,9 +110,7 @@ $(document).ready(function() {
       target +
       '"href="' +
       soc[2] +
-      '"><i class="fa d-icon fa-' +
-      klass +
-      '"></i>' +
+      '">' + iconHTML(iconName) +
       "</a>";
   });
 
