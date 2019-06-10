@@ -139,6 +139,9 @@
 
 @media screen and (max-width: 660px) {
   .custom-footer {
+    .first-box {
+      width: 100%;
+    }
     .list {
       margin-top: 1em;
       display: inline-block;
