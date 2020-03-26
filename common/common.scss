@@ -108,6 +108,9 @@
 #main-outlet {
   flex: 1 0 auto;
   max-width: calc(100% - 16px);
+  .mobile-view & {
+    max-width: calc(100% - 20px);
+  }
   width: $large-width;
 }
 
