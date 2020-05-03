@@ -3,10 +3,10 @@ import { dasherize } from "@ember/string";
 export default {
   setupComponent(args, component) {
     try {
-      const splitLinkSections = settings.Link_sections.split("|") || "";
-      const splitLinks = settings.Links.split("|") || "";
-      const splitSmallLinks = settings.Small_links.split("|") || "";
-      const splitSocialLinks = settings.Social_links.split("|") || "";
+      const splitLinkSections = settings.Link_sections.split("|");
+      const splitLinks = settings.Links.split("|");
+      const splitSmallLinks = settings.Small_links.split("|");
+      const splitSocialLinks = settings.Social_links.split("|");
 
       const linkArray = [];
       const sectionsArray = [];
@@ -23,12 +23,12 @@ export default {
         const title = fragments[4];
 
         const linkItem = {
-          parent: parent,
-          text: text,
-          className: className,
-          href: href,
-          target: target,
-          title: title
+          parent,
+          text,
+          className,
+          href,
+          target,
+          title
         };
         linkArray.push(linkItem);
       });
@@ -42,9 +42,9 @@ export default {
         const childLinks = linkArray.filter(link => link.parent === parentFor);
 
         const listItem = {
-          parentFor: parentFor,
-          text: text,
-          className: className,
+          parentFor,
+          text,
+          className,
           childLinks
         };
         sectionsArray.push(listItem);
@@ -59,15 +59,15 @@ export default {
         const target = fragments[3] === "blank" ? "_blank" : "";
         const icon = fragments[4].toLowerCase();
 
-        const SocialLinkItem = {
-          text: text,
-          className: className,
-          title: title,
-          href: href,
-          target: target,
-          icon: icon
+        const socialLinkItem = {
+          text,
+          className,
+          title,
+          href,
+          target,
+          icon
         };
-        socialLinksArray.push(SocialLinkItem);
+        socialLinksArray.push(socialLinkItem);
       });
 
       splitSmallLinks.forEach(link => {
@@ -78,19 +78,21 @@ export default {
         const target = fragments[2] === "blank" ? "_blank" : "";
 
         const smallLinkItem = {
-          text: text,
-          className: className,
-          href: href,
-          target: target
+          text,
+          className,
+          href,
+          target
         };
         smallLinksArray.push(smallLinkItem);
       });
 
-      component.set("mainHeading", settings.Heading);
-      component.set("blurb", settings.Blurb);
-      component.set("linkSections", sectionsArray);
-      component.set("smallLinks", smallLinksArray);
-      component.set("socialLinks", socialLinksArray);
+      this.setProperties({
+        mainHeading: settings.Heading,
+        blurb: settings.Blurb,
+        linkSections: sectionsArray,
+        smallLinks: smallLinksArray,
+        socialLinks: socialLinksArray
+      });
     } catch (error) {
       console.error(error);
       console.error(
