@@ -1,4 +1,7 @@
-import { dasherize } from "@ember/string";
+// Used instead of dasherize for backwards compatibility with stable
+const getClassName = text => {
+  return text.toLowerCase().replace(/\s/g, "-");
+};
 
 export default {
   setupComponent(args, component) {
@@ -17,7 +20,7 @@ export default {
         const fragments = link.split(",").map(fragment => fragment.trim());
         const parent = fragments[0].toLowerCase();
         const text = fragments[1];
-        const className = dasherize(text).toLowerCase();
+        const className = getClassName(text);
         const href = fragments[2];
         const target = fragments[3] === "blank" ? "_blank" : "";
         const title = fragments[4];
@@ -37,12 +40,11 @@ export default {
         const fragments = section.split(",").map(fragment => fragment.trim());
         const parentFor = fragments[0].toLowerCase();
         const text = fragments[0];
-        const className = dasherize(text).toLowerCase();
+        const className = getClassName(text);
         const title = fragments[1];
         const childLinks = linkArray.filter(link => link.parent === parentFor);
 
         const listItem = {
-          parentFor,
           text,
           className,
           childLinks
@@ -53,7 +55,7 @@ export default {
       splitSocialLinks.forEach(link => {
         const fragments = link.split(",").map(fragment => fragment.trim());
         const text = fragments[0];
-        const className = dasherize(text).toLowerCase();
+        const className = getClassName(text);
         const title = fragments[1];
         const href = fragments[2];
         const target = fragments[3] === "blank" ? "_blank" : "";
@@ -73,7 +75,7 @@ export default {
       splitSmallLinks.forEach(link => {
         const fragments = link.split(",").map(fragment => fragment.trim());
         const text = fragments[0];
-        const className = dasherize(text).toLowerCase();
+        const className = getClassName(text);
         const href = fragments[1];
         const target = fragments[2] === "blank" ? "_blank" : "";
 
