@@ -1,12 +1,12 @@
 .custom-footer {
   display: flex;
   flex-wrap: wrap;
-  background: $primary;
+  background: var(--primary);
   .flexbox {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    color: $secondary;
+    color: var(--secondary);
     padding: 2em 0 1em 0;
   }
   .first-box {
@@ -18,7 +18,7 @@
       display: block;
     }
     .blurb {
-      color: $secondary-high;
+      color: var(--secondary-high);
     }
   }
   .second-box {
@@ -41,7 +41,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    border-top: 1px solid rgba($primary-low, 0.05);
+    border-top: 1px solid rgba(var(--primary-low-rgb), 0.05);
     .social {
       display: flex;
       flex-wrap: wrap;
@@ -54,7 +54,7 @@
         justify-content: center;
 
         .d-icon {
-          color: $secondary;
+          color: var(--secondary);
           min-width: unset;
           margin: 0;
           font-size: $font-up-2;
@@ -63,7 +63,7 @@
       }
     }
     .small-link {
-      color: $secondary-high;
+      color: var(--secondary-high);
       margin: 0 0.25em;
       font-size: $font-down-2;
     }
@@ -75,7 +75,7 @@
     font-weight: bold;
   }
   .footer-section-link-wrapper a {
-    color: $secondary-high;
+    color: var(--secondary-high);
   }
   .list {
     margin: 1em;
@@ -112,11 +112,11 @@
   width: $large-width;
 }
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: $large-width) {
   .custom-footer {
     .first-box {
       max-width: 100%;
-      border-bottom: 1px solid rgba($primary-low, 0.05);
+      border-bottom: 1px solid rgba(var(--primary-low-rgb), 0.05);
       margin-bottom: 1em;
       padding-bottom: 1em;
 
@@ -135,10 +135,15 @@
       margin: 0;
       margin-top: 1em;
     }
+    .first-box,
+    .second-box,
+    .third-box {
+      flex: 1 1 100%;
+    }
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 700px) {
   .custom-footer {
     .first-box {
       width: 100%;
