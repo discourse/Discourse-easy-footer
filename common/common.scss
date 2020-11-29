@@ -112,7 +112,7 @@
   width: $large-width;
 }
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: $large-width) {
   .custom-footer {
     .first-box {
       max-width: 100%;
@@ -135,10 +135,15 @@
       margin: 0;
       margin-top: 1em;
     }
+    .first-box,
+    .second-box,
+    .third-box {
+      flex: 1 1 100%;
+    }
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 700px) {
   .custom-footer {
     .first-box {
       width: 100%;
