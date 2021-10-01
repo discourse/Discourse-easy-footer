@@ -1,6 +1,6 @@
 {
   "name": "Easy Footer",
-  "about_url": "https://meta.discourse.org/t/",
+  "about_url": "https://meta.discourse.org/t/easy-responsive-footer/95818",
   "component": true,
-  "license_url": "https://github.com/hnb-ku/Discourse-easy-footer/blob/master/LICENSE"
+  "license_url": "https://github.com/discourse/Discourse-easy-footer/blob/main/LICENSE"
 }
