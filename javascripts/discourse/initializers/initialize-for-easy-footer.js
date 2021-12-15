@@ -7,6 +7,7 @@ export default {
     withPluginApi("0.8", api => {
       if (settings.Show_footer_on_login_required_page) {
         api.modifyClass("controller:static", {
+          pluginId: "Discourse-easy-footer",
           @on("init")
           showFooterOnStatic() {
             this.set("application.showFooter", true);
