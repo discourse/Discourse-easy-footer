@@ -46,6 +46,7 @@ export default {
 
         const listItem = {
           text,
+          title,
           className,
           childLinks
         };
