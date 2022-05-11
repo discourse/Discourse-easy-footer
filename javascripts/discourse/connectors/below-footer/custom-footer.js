@@ -1,12 +1,13 @@
 // Used instead of dasherize for backwards compatibility with stable
-const getClassName = text => {
+const getClassName = (text) => {
   return text.toLowerCase().replace(/\s/g, "-");
 };
 
 export default {
-  setupComponent(args, component) {
+  setupComponent() {
     try {
-      const splitLinkSections = settings.Link_sections.split("|").filter(Boolean);
+      const splitLinkSections =
+        settings.Link_sections.split("|").filter(Boolean);
       const splitLinks = settings.Links.split("|").filter(Boolean);
       const splitSmallLinks = settings.Small_links.split("|").filter(Boolean);
       const splitSocialLinks = settings.Social_links.split("|").filter(Boolean);
@@ -16,8 +17,8 @@ export default {
       const smallLinksArray = [];
       const socialLinksArray = [];
 
-      splitLinks.forEach(link => {
-        const fragments = link.split(",").map(fragment => fragment.trim());
+      splitLinks.forEach((link) => {
+        const fragments = link.split(",").map((fragment) => fragment.trim());
         const parent = fragments[0].toLowerCase();
         const text = fragments[1];
         const className = getClassName(text);
@@ -31,29 +32,31 @@ export default {
           className,
           href,
           target,
-          title
+          title,
         };
         linkArray.push(linkItem);
       });
 
-      splitLinkSections.forEach(section => {
-        const fragments = section.split(",").map(fragment => fragment.trim());
+      splitLinkSections.forEach((section) => {
+        const fragments = section.split(",").map((fragment) => fragment.trim());
         const parentFor = fragments[0].toLowerCase();
         const text = fragments[0];
+        // const title = fragments[1];
         const className = getClassName(text);
-        const title = fragments[1];
-        const childLinks = linkArray.filter(link => link.parent === parentFor);
+        const childLinks = linkArray.filter(
+          (link) => link.parent === parentFor
+        );
 
         const listItem = {
           text,
           className,
-          childLinks
+          childLinks,
         };
         sectionsArray.push(listItem);
       });
 
-      splitSocialLinks.forEach(link => {
-        const fragments = link.split(",").map(fragment => fragment.trim());
+      splitSocialLinks.forEach((link) => {
+        const fragments = link.split(",").map((fragment) => fragment.trim());
         const text = fragments[0];
         const className = getClassName(text);
         const title = fragments[1];
@@ -67,13 +70,13 @@ export default {
           title,
           href,
           target,
-          icon
+          icon,
         };
         socialLinksArray.push(socialLinkItem);
       });
 
-      splitSmallLinks.forEach(link => {
-        const fragments = link.split(",").map(fragment => fragment.trim());
+      splitSmallLinks.forEach((link) => {
+        const fragments = link.split(",").map((fragment) => fragment.trim());
         const text = fragments[0];
         const className = getClassName(text);
         const href = fragments[1];
@@ -83,7 +86,7 @@ export default {
           text,
           className,
           href,
-          target
+          target,
         };
         smallLinksArray.push(smallLinkItem);
       });
@@ -93,13 +96,14 @@ export default {
         blurb: settings.Blurb,
         linkSections: sectionsArray,
         smallLinks: smallLinksArray,
-        socialLinks: socialLinksArray
+        socialLinks: socialLinksArray,
       });
     } catch (error) {
-      console.error(error);
+      // eslint-disable-next-line no-console
       console.error(
-        "There's an issue in the Easy Footer Component. Check if your settings are entered correctly"
+        "There's an issue in the Easy Footer Component. Check if your settings are entered correctly",
+        error
       );
     }
-  }
+  },
 };
