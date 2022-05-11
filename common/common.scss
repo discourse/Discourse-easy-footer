@@ -2,6 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   background: var(--primary);
+  .wrap {
+    box-sizing: border-box;
+  }
   .flexbox {
     width: 100%;
     display: flex;
@@ -105,8 +108,7 @@
 
 #main-outlet {
   flex: 1 0 auto;
-  max-width: calc(100% - 20px);
-  width: $large-width;
+  width: 100%;
 }
 
 @media screen and (max-width: $large-width) {
