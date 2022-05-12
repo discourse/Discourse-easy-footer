@@ -13,13 +13,19 @@
         <div class="links">
           {{#each linkSections as |section|}}
             <div class="list">
-              <span class="{{section.className}}" title="{{section.title}}">
+              <span class={{section.className}} title={{section.title}}>
                 {{section.text}}
               </span>
+
               <ul>
                 {{#each section.childLinks as |link|}}
                   <li class="footer-section-link-wrapper {{link.className}}">
-                    <a class="footer-section-link" title="{{link.title}}" href="{{link.href}}" target="{{link.target}}">
+                    <a
+                      class="footer-section-link"
+                      title={{link.title}}
+                      href={{link.href}}
+                      target={{link.target}}
+                    >
                       {{link.text}}
                     </a>
                   </li>
@@ -32,12 +38,27 @@
       <div class="third-box">
         <div class="footer-links">
           {{#each smallLinks as |link|}}
-            <a class="small-link {{link.className}}" title="{{link.title}}" target="{{link.target}}" href="{{link.href}}">{{link.text}}</a>
+            <a
+              class="small-link {{link.className}}"
+              title={{link.title}}
+              target={{link.target}}
+              href={{link.href}}
+            >
+              {{link.text}}
+            </a>
           {{/each}}
         </div>
+
         <div class="social">
           {{#each socialLinks as |link|}}
-            <a class="social-link {{link.className}}" title="{{link.title}}" target="{{link.target}}" href="{{link.href}}">{{d-icon link.icon}}</a>
+            <a
+              class="social-link {{link.className}}"
+              title={{link.title}}
+              target={{link.target}}
+              href={{link.href}}
+            >
+              {{d-icon link.icon}}
+            </a>
           {{/each}}
         </div>
       </div>
