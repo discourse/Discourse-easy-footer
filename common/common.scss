@@ -96,17 +96,9 @@
   }
 }
 
-// sticky footer
-#main > div:first-child {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
 #main-outlet {
-  flex: 1 0 auto;
-  max-width: calc(100% - 20px);
-  width: $large-width;
+  // stick footer to bottom of short pages
+  min-height: 85vh;
 }
 
 @media screen and (max-width: $large-width) {
