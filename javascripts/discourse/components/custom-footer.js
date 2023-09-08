@@ -1,8 +1,9 @@
 import Component from "@glimmer/component";
+import { dasherize } from "@ember/string";
 
 // Used instead of dasherize for backwards compatibility with stable
 const getClassName = (text) => {
-  return text.toLowerCase().replace(/\s/g, "-");
+  return `--${dasherize(text)}`;
 };
 
 export default class extends Component {
