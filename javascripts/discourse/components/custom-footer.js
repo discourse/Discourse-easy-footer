@@ -1,10 +1,6 @@
 import Component from "@glimmer/component";
 import { dasherize } from "@ember/string";
 
-const getClassName = (text) => {
-  return `--${dasherize(text)}`;
-};
-
 export default class extends Component {
   mainHeading = settings.Heading;
   blurb = settings.Blurb;
@@ -15,7 +11,7 @@ export default class extends Component {
       const fragments = link.split(",").map((fragment) => fragment.trim());
       const parent = fragments[0].toLowerCase();
       const text = fragments[1];
-      const className = getClassName(text);
+      const dataName = dasherize(text);
       const href = fragments[2];
       const target = fragments[3] === "blank" ? "_blank" : "";
       const title = fragments[4];
@@ -23,7 +19,7 @@ export default class extends Component {
       return {
         parent,
         text,
-        className,
+        dataName,
         href,
         target,
         title,
@@ -36,14 +32,14 @@ export default class extends Component {
       const fragments = section.split(",").map((fragment) => fragment.trim());
       const parentFor = fragments[0].toLowerCase();
       const text = fragments[0];
-      const className = getClassName(text);
+      const dataName = dasherize(text);
       const childLinks = this.linkArray.filter(
         (link) => link.parent === parentFor
       );
 
       return {
         text,
-        className,
+        dataName,
         childLinks,
       };
     });
@@ -53,13 +49,13 @@ export default class extends Component {
     .map((link) => {
       const fragments = link.split(",").map((fragment) => fragment.trim());
       const text = fragments[0];
-      const className = getClassName(text);
+      const dataName = dasherize(text);
       const href = fragments[1];
       const target = fragments[2] === "blank" ? "_blank" : "";
 
       return {
         text,
-        className,
+        dataName,
         href,
         target,
       };
@@ -70,7 +66,7 @@ export default class extends Component {
     .map((link) => {
       const fragments = link.split(",").map((fragment) => fragment.trim());
       const text = fragments[0];
-      const className = getClassName(text);
+      const dataName = dasherize(text);
       const title = fragments[1];
       const href = fragments[2];
       const target = fragments[3] === "blank" ? "_blank" : "";
@@ -78,7 +74,7 @@ export default class extends Component {
 
       return {
         text,
-        className,
+        dataName,
         title,
         href,
         target,
