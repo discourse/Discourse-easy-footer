@@ -13,7 +13,10 @@
         <div class="links">
           {{#each this.linkSections as |section|}}
             <div class="list">
-              <span data-name={{section.dataName}} title={{section.title}}>
+              <span
+                data-easyfooter-section={{section.dataName}}
+                title={{section.title}}
+              >
                 {{section.text}}
               </span>
 
@@ -21,7 +24,7 @@
                 {{#each section.childLinks as |link|}}
                   <li
                     class="footer-section-link-wrapper"
-                    data-name={{link.dataName}}
+                    data-easyfooter-link={{link.dataName}}
                   >
                     <a
                       class="footer-section-link"
@@ -43,7 +46,7 @@
           {{#each this.smallLinks as |link|}}
             <a
               class="small-link"
-              data-name={{link.dataName}}
+              data-easyfooter-small-link={{link.dataName}}
               title={{link.title}}
               target={{link.target}}
               href={{link.href}}
@@ -57,7 +60,7 @@
           {{#each this.socialLinks as |link|}}
             <a
               class="social-link"
-              data-name={{link.dataName}}
+              data-easyfooter-social-link={{link.dataName}}
               title={{link.title}}
               target={{link.target}}
               href={{link.href}}
