@@ -12,11 +12,8 @@
       <div class="second-box">
         <div class="links">
           {{#each this.linkSections as |section|}}
-            <div class="list">
-              <span
-                data-easyfooter-section={{section.dataName}}
-                title={{section.title}}
-              >
+            <div class="list" data-easyfooter-section={{section.dataName}}>
+              <span title={{section.title}}>
                 {{section.text}}
               </span>
 
