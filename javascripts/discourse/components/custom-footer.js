@@ -32,6 +32,7 @@ export default class extends Component {
       const fragments = section.split(",").map((fragment) => fragment.trim());
       const parentFor = fragments[0].toLowerCase();
       const text = fragments[0];
+      const title = fragments[1];
       const dataName = dasherize(text);
       const childLinks = this.linkArray.filter(
         (link) => link.parent === parentFor
@@ -39,6 +40,7 @@ export default class extends Component {
 
       return {
         text,
+        title,
         dataName,
         childLinks,
       };
