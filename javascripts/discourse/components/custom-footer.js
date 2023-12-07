@@ -14,7 +14,7 @@ export default class extends Component {
       const dataName = dasherize(text);
       const href = fragments[2];
       const target = fragments[3] === "blank" ? "_blank" : "";
-      const title = fragments[4];
+      const title = fragments[4] === "" ? text : title;
       const referrerpolicy = fragments[5];
 
       return {
