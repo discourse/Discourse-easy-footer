@@ -27,7 +27,7 @@
                       class="footer-section-link"
                       title={{link.title}}
                       href={{link.href}}
-                      {{#if link.target}}target={{link.target}}{{/if}}
+                      {{if target "target="link.target}}
                       foo={{link.attributes}}
                     >
                       {{link.text}}
