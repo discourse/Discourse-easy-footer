@@ -25,10 +25,11 @@
                   >
                     <a
                       class="footer-section-link"
-                      {{#if link.title}}title={{link.title}}{{else}}{{/if}}
+                      <!--title={{link.title}}-->
+                      {{link.title}}
                       href={{link.href}}
-                      {{#if link.target}}target={{link.target}}{{else}}{{/if}}
-                      {{{link.attributes}}}
+                      target={{link.target}}
+                      foo={{{link.attributes}}}
                     >
                       {{link.text}}
                     </a>
