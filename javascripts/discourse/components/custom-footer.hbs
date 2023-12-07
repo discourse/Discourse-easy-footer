@@ -25,9 +25,9 @@
                   >
                     <a
                       class="footer-section-link"
-                      title={{link.title}}
+                      {{#if link.title}}title={{link.title}}{{/if}}
                       href={{link.href}}
-                      target={{link.target}}
+                      {{#if link.target}}target={{link.target}}{{/if}}
                       {{{link.attributes}}}
                     >
                       {{link.text}}
