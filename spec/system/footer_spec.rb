@@ -4,9 +4,9 @@ RSpec.describe "Footer", system: true do
   let!(:theme) { upload_theme_component }
 
   it "should display the footer" do
-    theme.update_setting(:Link_sections, "Section 1, Section 1 title|Section 2, Section 2 title")
+    theme.update_setting(:link_sections, "Section 1, Section 1 title|Section 2, Section 2 title")
     theme.update_setting(
-      :Links,
+      :links,
       "Section 1, Section 1 Link, http://some.url.com/section1/link1, blank, Section 1 Link Title|Section 1, Section 1 Link 2, http://some.url.com/section1/link2, blank, Section 1 Link 2 Title|Section 2, Section 2 Link, http://some.url.com/section2/link1, blank, Section 2 Link Title|Section 2, Section 2 Link 2, http://some.url.com/section2/link2, blank, Section 2 Link 2 Title",
     )
     theme.save!
@@ -14,8 +14,8 @@ RSpec.describe "Footer", system: true do
     visit("/")
 
     expect(page).to have_css(".below-footer-outlet.custom-footer")
-    expect(page).to have_css(".below-footer-outlet .heading", text: theme.get_setting(:Heading))
-    expect(page).to have_css(".below-footer-outlet .blurb", text: theme.get_setting(:Blurb))
+    expect(page).to have_css(".below-footer-outlet .heading", text: theme.get_setting(:heading))
+    expect(page).to have_css(".below-footer-outlet .blurb", text: theme.get_setting(:blurb))
 
     within(".below-footer-outlet .links .list[data-easyfooter-section='section-1']") do
       expect(page).to have_css("span[title='Section 1 title']", text: "Section 1")
@@ -77,7 +77,7 @@ RSpec.describe "Footer", system: true do
   it "should not display the footer to anon users when `Show_footer_on_login_required_page` is false" do
     SiteSetting.login_required = true
 
-    theme.update_setting(:Show_footer_on_login_required_page, false)
+    theme.update_setting(:show_footer_on_login_required_page, false)
     theme.save!
 
     visit("/")
