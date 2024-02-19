@@ -2,10 +2,11 @@ import Component from "@glimmer/component";
 import { dasherize } from "@ember/string";
 
 export default class extends Component {
-  mainHeading = settings.Heading;
-  blurb = settings.Blurb;
+  mainHeading = settings.heading;
+  blurb = settings.blurb;
 
-  linkArray = settings.Links.split("|")
+  linkArray = settings.links
+    .split("|")
     .filter(Boolean)
     .map((link) => {
       const fragments = link.split(",").map((fragment) => fragment.trim());
@@ -28,7 +29,8 @@ export default class extends Component {
       };
     });
 
-  linkSections = settings.Link_sections.split("|")
+  linkSections = settings.link_sections
+    .split("|")
     .filter(Boolean)
     .map((section) => {
       const fragments = section.split(",").map((fragment) => fragment.trim());
@@ -48,7 +50,8 @@ export default class extends Component {
       };
     });
 
-  smallLinks = settings.Small_links.split("|")
+  smallLinks = settings.small_links
+    .split("|")
     .filter(Boolean)
     .map((link) => {
       const fragments = link.split(",").map((fragment) => fragment.trim());
@@ -65,7 +68,8 @@ export default class extends Component {
       };
     });
 
-  socialLinks = settings.Social_links.split("|")
+  socialLinks = settings.social_links
+    .split("|")
     .filter(Boolean)
     .map((link) => {
       const fragments = link.split(",").map((fragment) => fragment.trim());
