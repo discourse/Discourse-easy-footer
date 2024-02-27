@@ -16,6 +16,7 @@ export default class extends Component {
       const href = fragments[2];
       const target = fragments[3] === "blank" ? "_blank" : "";
       const title = fragments[4];
+      const referrerpolicy = fragments[5];
 
       return {
         parent,
@@ -24,6 +25,7 @@ export default class extends Component {
         href,
         target,
         title,
+        referrerpolicy,
       };
     });
 
