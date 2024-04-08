@@ -74,7 +74,18 @@ RSpec.describe "Footer", system: true do
     end
   end
 
-  it "should not display the footer to anon users when `Show_footer_on_login_required_page` is false" do
+  it "should display the footer to anon users when `show_footer_on_login_required_page` is true" do
+    SiteSetting.login_required = true
+
+    theme.update_setting(:show_footer_on_login_required_page, true)
+    theme.save!
+
+    visit("/")
+
+    expect(page).to have_css(".below-footer-outlet.custom-footer")
+  end
+
+  it "should not display the footer to anon users when `show_footer_on_login_required_page` is false" do
     SiteSetting.login_required = true
 
     theme.update_setting(:show_footer_on_login_required_page, false)
