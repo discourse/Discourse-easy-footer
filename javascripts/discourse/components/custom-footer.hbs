@@ -10,34 +10,36 @@
         </div>
       </div>
       <div class="second-box">
-        <div class="links">
-          {{#each this.linkSections as |section|}}
-            <div class="list" data-easyfooter-section={{section.dataName}}>
-              <span title={{section.title}}>
-                {{section.text}}
-              </span>
+        <PluginOutlet @name="easy-footer-second-box">
+          <div class="links">
+            {{#each this.linkSections as |section|}}
+              <div class="list" data-easyfooter-section={{section.dataName}}>
+                <span title={{section.title}}>
+                  {{section.text}}
+                </span>
 
-              <ul>
-                {{#each section.childLinks as |link|}}
-                  <li
-                    class="footer-section-link-wrapper"
-                    data-easyfooter-link={{link.dataName}}
-                  >
-                    <a
-                      class="footer-section-link"
-                      title={{link.title}}
-                      href={{link.href}}
-                      target={{link.target}}
-                      referrerpolicy={{link.referrerpolicy}}
+                <ul>
+                  {{#each section.childLinks as |link|}}
+                    <li
+                      class="footer-section-link-wrapper"
+                      data-easyfooter-link={{link.dataName}}
                     >
-                      {{link.text}}
-                    </a>
-                  </li>
-                {{/each}}
-              </ul>
-            </div>
-          {{/each}}
-        </div>
+                      <a
+                        class="footer-section-link"
+                        title={{link.title}}
+                        href={{link.href}}
+                        target={{link.target}}
+                        referrerpolicy={{link.referrerpolicy}}
+                      >
+                        {{link.text}}
+                      </a>
+                    </li>
+                  {{/each}}
+                </ul>
+              </div>
+            {{/each}}
+          </div>
+        </PluginOutlet>
       </div>
       <div class="third-box">
         <div class="footer-links">
