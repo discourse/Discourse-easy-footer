@@ -12,24 +12,27 @@
       <div class="second-box">
         <PluginOutlet @name="easy-footer-second-box">
           <div class="links">
-            {{#each this.linkSections as |section|}}
-              <div class="list" data-easyfooter-section={{section.dataName}}>
+            {{#each (theme-setting "sections") as |section|}}
+              <div
+                class="list"
+                data-easyfooter-section={{dasherize section.text}}
+              >
                 <span title={{section.title}}>
                   {{section.text}}
                 </span>
 
                 <ul>
-                  {{#each section.childLinks as |link|}}
+                  {{#each section.links as |link|}}
                     <li
                       class="footer-section-link-wrapper"
-                      data-easyfooter-link={{link.dataName}}
+                      data-easyfooter-link={{dasherize link.text}}
                     >
                       <a
                         class="footer-section-link"
                         title={{link.title}}
-                        href={{link.href}}
+                        href={{link.url}}
                         target={{link.target}}
-                        referrerpolicy={{link.referrerpolicy}}
+                        referrerpolicy={{link.referrer_policy}}
                       >
                         {{link.text}}
                       </a>
@@ -41,6 +44,7 @@
           </div>
         </PluginOutlet>
       </div>
+
       <div class="third-box">
         <div class="footer-links">
           {{#each this.smallLinks as |link|}}

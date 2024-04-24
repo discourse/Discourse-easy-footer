@@ -4,11 +4,46 @@ RSpec.describe "Footer", system: true do
   let!(:theme) { upload_theme_component }
 
   it "should display the footer" do
-    theme.update_setting(:link_sections, "Section 1, Section 1 title|Section 2, Section 2 title")
     theme.update_setting(
-      :links,
-      "Section 1, Section 1 Link, http://some.url.com/section1/link1, blank, Section 1 Link Title|Section 1, Section 1 Link 2, http://some.url.com/section1/link2, blank, Section 1 Link 2 Title|Section 2, Section 2 Link, http://some.url.com/section2/link1, blank, Section 2 Link Title|Section 2, Section 2 Link 2, http://some.url.com/section2/link2, blank, Section 2 Link 2 Title",
+      :sections,
+      [
+        {
+          text: "Section 1",
+          title: "Section 1 title",
+          links: [
+            {
+              text: "Section 1 Link",
+              url: "http://some.url.com/section1/link1",
+              title: "Section 1 Link Title",
+              referrer_policy: "origin",
+            },
+            {
+              text: "Section 1 Link 2",
+              url: "http://some.url.com/section1/link2",
+              target: "_self",
+              title: "Section 1 Link 2 Title",
+            },
+          ],
+        },
+        {
+          text: "Section 2",
+          title: "Section 2 title",
+          links: [
+            {
+              text: "Section 2 Link",
+              url: "http://some.url.com/section2/link1",
+              title: "Section 2 Link Title",
+            },
+            {
+              text: "Section 2 Link 2",
+              url: "http://some.url.com/section2/link2",
+              title: "Section 2 Link 2 Title",
+            },
+          ],
+        },
+      ],
     )
+
     theme.save!
 
     visit("/")
@@ -20,17 +55,14 @@ RSpec.describe "Footer", system: true do
     within(".below-footer-outlet .links .list[data-easyfooter-section='section-1']") do
       expect(page).to have_css("span[title='Section 1 title']", text: "Section 1")
 
-      expect(page).to have_link(
-        "Section 1 Link",
-        href: "http://some.url.com/section1/link1",
-        target: "_blank",
-        title: "Section 1 Link Title",
+      expect(page).to have_selector(
+        "a[href='http://some.url.com/section1/link1'][title='Section 1 Link Title'][referrerpolicy='origin']",
       )
 
       expect(page).to have_link(
         "Section 1 Link 2",
         href: "http://some.url.com/section1/link2",
-        target: "_blank",
+        target: "_self",
         title: "Section 1 Link 2 Title",
       )
     end
@@ -41,14 +73,12 @@ RSpec.describe "Footer", system: true do
       expect(page).to have_link(
         "Section 2 Link",
         href: "http://some.url.com/section2/link1",
-        target: "_blank",
         title: "Section 2 Link Title",
       )
 
       expect(page).to have_link(
         "Section 2 Link 2",
         href: "http://some.url.com/section2/link2",
-        target: "_blank",
         title: "Section 2 Link 2 Title",
       )
     end

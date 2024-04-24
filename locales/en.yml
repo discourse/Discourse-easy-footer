@@ -5,6 +5,33 @@ en:
         description: "Text for the heading in the footer - you can use your site name for example - Max length 25 characters"
       blurb:
         description: "Enter a short blurb about your community - Max length 180 characters"
+      sections:
+        description: "Sections to be displayed in the footer"
+        schema:
+          properties:
+            text:
+              label: Text
+              description: Text to be displayed for the section
+            title:
+              label: Title
+              description: The title attribute of the section
+            links:
+              text:
+                label: Text
+                description: Text to be displayed for the link
+              url:
+                label: URL
+                description: The URL the link points to
+              target:
+                label: Target
+                description: The target attribute of the link
+              title:
+                label: Title
+                description: The title attribute of the link
+              referrer_policy:
+                label: Referrer Policy
+                description: The referrerpolicy attribute of the link
+
       link_sections:
         description: "Add link sections. The ideal number of sections is six. One item per line in this order:<br> Text, title<br><b>Text:</b> what appears on in the footer<br><b>Title:</b> the text that appears when the item is hovered."
       links:

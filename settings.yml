@@ -1,27 +1,175 @@
 heading:
   default: "This is a header"
   max: 25
+
 blurb:
   default: "Ius vitae ornatus at, ei mea sumo quot dicant. Ei tale democritum eos, in mea timeam accumsan forensibus. Ei his aperiam suavitate. Et debitis convenire sea, viris dictas latine."
   max: 180
-link_sections:
-  type: list
-  list_type: simple
-  default: "Design, Get inspired!|Code, Learn new things!|Business, Start a new career!|Shop, Buy cool stuff!|Community, The latest news about the people you care about!|World, Check out what's happening"
-links:
-  type: list
-  list_type: simple
-  default: "Design, Design process, #, blank, Learn the basics|Design, Blog design, #, blank, What makes for a great blog?|Design, Photoshop tutorials, #, blank, Photoshop for beginners|Design, Design trends, #, blank, Stay on top of the current trends!|Code, Wordpress, #, blank, Wordpress code examples|Code, Tools, #, blank, Tools that will make your life easier!|Code, Tutorials, #, blank, Just starting out? We'll guide you through the basics|Business, Blogging, #, blank, Why not start a blog?|Business, Social media, #, blank, Learn how to leverage Social media and make it work for your business|Business, Make money, #, blank, Everyone likes to be paid!|Business, Marketing, #, blank, No business will survive without customers...Here's how to get'em!|Shop, Vectors, #, blank, buy vectors|Shop, Textures, #, blank, buy textures|Shop, UI kits, #, blank, buy UI kits|Shop, PSDs, #, blank, Ready-made PSD's|Community, Your corner, #, blank, Tell us how you feel!|Community, Questions, #, blank, Feel like answering some questions?|Community, Members, #, blank, Say hi to new members|Community, trending, #, blank, Catch up with the latest trending topics!|World, Politics, #, blank, Stay up to date|World, Education, #, blank, The latest research|World, Automotive, #, blank, We cover the latest models!|World, Sports, #, The latest scores|World, Tech, #, Never miss a new gadget"
+
+sections:
+  type: objects
+  default:
+    - text: Design
+      title: Get inspired!
+      links:
+        - text: Design process
+          url: "#"
+          title: Learn the basics
+        - text: Blog design
+          url: "#"
+          title: What makes for a great blog?
+        - text: Photoshop tutorials
+          url: "#"
+          title: Photoshop for beginners
+        - text: Design trends
+          url: "#"
+          title: Stay on top of the current trends!
+    - text: Code
+      title: Learn new things!
+      links:
+        - text: Wordpress
+          url: "#"
+          title: Wordpress code examples
+        - text: Tools
+          url: "#"
+          title: Tools that will make your life easier!
+        - text: Tutorials
+          url: "#"
+          title: Just starting out? We'll guide you through the basics
+    - text: Business
+      title: Start a new career!
+      links:
+        - text: Blogging
+          url: "#"
+          title: Why not start a blog?
+        - text: Social media
+          url: "#"
+          title: Learn how to leverage Social media and make it work for your business
+        - text: Make money
+          url: "#"
+          title: Everyone likes to be paid!
+        - text: Marketing
+          url: "#"
+          title: No business will survive without customers...Here's how to get'em!
+    - text: Shop
+      title: Buy cool stuff!
+      links:
+        - text: Vectors
+          url: "#"
+          title: buy vectors
+        - text: Textures
+          url: "#"
+          title: buy textures
+        - text: UI kits
+          url: "#"
+          title: buy UI kits
+        - text: PSDs
+          url: "#"
+          title: Ready-made PSD's
+    - text: Community
+      title: The latest news about the people you care about!
+      links:
+        - text: Your corner
+          url: "#"
+          title: Tell us how you feel!
+        - text: Questions
+          url: "#"
+          title: Feel like answering some questions?
+        - text: Members
+          url: "#"
+          title: Say hi to new members
+        - text: trending
+          url: "#"
+          title: Catch up with the latest trending topics!
+    - text: World
+      title: Check out what's happening
+      links:
+        - text: Politics
+          url: "#"
+          title: Stay up to date
+        - text: Education
+          url: "#"
+          title: The latest research
+        - text: Automotive
+          url: "#"
+          title: We cover the latest models!
+        - text: Sports
+          url: "#"
+          title: The latest scores
+        - text: Tech
+          url: "#"
+          title: Never miss a new gadget
+  schema:
+    name: link section
+    identifier: text
+    properties:
+      text:
+        type: string
+        required: true
+        validations:
+          min: 1
+          max: 1000
+      title:
+        type: string
+        required: true
+        validations:
+          min: 1
+          max: 1000
+      links:
+        type: objects
+        schema:
+          name: link
+          identifier: text
+          properties:
+            text:
+              type: string
+              required: true
+              validations:
+                min: 1
+                max: 1000
+            url:
+              type: string
+              required: true
+              validations:
+                min: 1
+                max: 2048
+            target:
+              type: enum
+              default: _blank
+              choices:
+                - _blank
+                - _self
+                - _parent
+                - _top
+            title:
+              type: string
+              required: true
+              validations:
+                min: 1
+                max: 1000
+            referrer_policy:
+              type: enum
+              default: no-referrer-when-downgrade
+              choices:
+                - no-referrer
+                - no-referrer-when-downgrade
+                - origin
+                - origin-when-cross-origin
+                - unsafe-url
+
 small_links:
   type: list
   list_type: simple
   default: "Privacy, #, self|Terms of service, #, self| About, #, self"
+
 social_links:
   type: list
   list_type: simple
   default: "Facebook, Join us on Facebook, #, blank,fab-facebook|Twitter, show some love on Twitter, #, blank,fab-twitter| Youtube, Check out our latest videos on Youtube, #, blank,fab-youtube"
+
 show_footer_on_login_required_page:
   default: true
+
 svg_icons:
   default: "fab-facebook|fab-twitter|fab-youtube"
   type: "list"
