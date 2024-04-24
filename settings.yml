@@ -111,7 +111,6 @@ sections:
           max_length: 1000
       title:
         type: string
-        required: true
         validations:
           min_length: 1
           max_length: 1000
@@ -143,7 +142,6 @@ sections:
                 - _top
             title:
               type: string
-              required: true
               validations:
                 min_length: 1
                 max_length: 1000
