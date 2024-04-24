@@ -95,7 +95,7 @@ RSpec.describe "Footer", system: true do
       )
 
       expect(page).to have_css(
-        "a.social-link[data-easyfooter-social-link='twitter'][title='show some love on Twitter'][href='#'][target='_blank'] .d-icon-fab-twitter",
+        "a.social-link[data-easyfooter-social-link='twitter'][title='Show some love on Twitter'][href='#'][target='_blank'] .d-icon-fab-twitter",
       )
 
       expect(page).to have_css(
