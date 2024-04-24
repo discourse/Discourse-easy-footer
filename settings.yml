@@ -107,14 +107,14 @@ sections:
         type: string
         required: true
         validations:
-          min: 1
-          max: 1000
+          min_length: 1
+          max_length: 1000
       title:
         type: string
         required: true
         validations:
-          min: 1
-          max: 1000
+          min_length: 1
+          max_length: 1000
       links:
         type: objects
         schema:
@@ -125,14 +125,14 @@ sections:
               type: string
               required: true
               validations:
-                min: 1
-                max: 1000
+                min_length: 1
+                max_length: 1000
             url:
               type: string
               required: true
               validations:
-                min: 1
-                max: 2048
+                min_length: 1
+                max_length: 2048
             target:
               type: enum
               default: _blank
@@ -145,8 +145,8 @@ sections:
               type: string
               required: true
               validations:
-                min: 1
-                max: 1000
+                min_length: 1
+                max_length: 1000
             referrer_policy:
               type: enum
               default: no-referrer-when-downgrade
