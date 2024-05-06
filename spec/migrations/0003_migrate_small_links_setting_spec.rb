@@ -3,6 +3,19 @@
 RSpec.describe "0003-migrate-small-links-setting migration" do
   let!(:theme) { upload_theme_component }
 
+  it "should handle an empty string for old setting" do
+    theme.theme_settings.create!(
+      name: "small_links",
+      theme:,
+      data_type: ThemeSetting.types[:string],
+      value: "    ",
+    )
+
+    run_theme_migration(theme, "0003-migrate-small-links-setting")
+
+    expect(theme.settings[:small_links].value).to eq([])
+  end
+
   it "should set target property to `_blank` if previous target component is not valid or empty" do
     theme.theme_settings.create!(
       name: "small_links",
