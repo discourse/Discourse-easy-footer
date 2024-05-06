@@ -47,13 +47,12 @@
 
       <div class="third-box">
         <div class="footer-links">
-          {{#each this.smallLinks as |link|}}
+          {{#each (theme-setting "small_links") as |link|}}
             <a
               class="small-link"
-              data-easyfooter-small-link={{link.dataName}}
-              title={{link.title}}
+              data-easyfooter-small-link={{dasherize link.text}}
               target={{link.target}}
-              href={{link.href}}
+              href={{link.url}}
             >
               {{link.text}}
             </a>

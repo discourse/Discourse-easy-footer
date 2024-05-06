@@ -32,12 +32,20 @@ en:
                 label: Referrer Policy
                 description: The referrerpolicy attribute of the link
 
-      link_sections:
-        description: "Add link sections. The ideal number of sections is six. One item per line in this order:<br> Text, title<br><b>Text:</b> what appears on in the footer<br><b>Title:</b> the text that appears when the item is hovered."
-      links:
-        description: "Add links to link sections. One item per line in this order:<br>Parent, text, URL, target, title, referrer policy<br>It is a good idea to keep the number of links under each section similar<br><b>Parent:</b> the name of the parent section which this link shows under. Use the `text` value from the list above<br><b>Text:</b> the text that shows for this link<br><b>URL:</b> the path this item links to. You can use relative paths as well.<br><b>Target:</b> Choose whether this item will open in a new tab or in the same tab. Use blank to open the link in a new tab, or use self to open it in the same tab.<br><b>Title:</b> the text that shows when the link is hovered.<br/><b>Referrer Policy:</b> the referrer policy to use in the link."
       small_links:
-        description: "You can add small links at the bottom of the footer like Terms of Service and Privacy. One item per line in this order:<br>Text, URL, target<br><b>Text:</b> The text that shows for the small link<br><b>URL:</b> The path of the link<br><b>Target:</b> Use blank to open the link in a new tab and use self to open it in the same tab"
+        description: "Small links at the bottom of the footer like Terms of Service and Privacy"
+        schema:
+          properties:
+            text:
+              label: Text
+              description: Text to be displayed for the link
+            url:
+              label: URL
+              description: The URL the link points to
+            target:
+              label: Target
+              description: The target attribute of the link
+
       social_links:
         description: "Enter the social links you'd like to add to the footer in this format:<br> provider, title, URL, target<br><b>Provider:</b> is the name of the provider like Facebook or Twitter<br><b>Title:</b> The text that shows when the link is hovered<br><b>URL:</b> The path you'd like the link to have<br><b>Target:</b> Use blank to open the link in a new tab and use self to open it in the same tab<br><b>Icon:</b> use a FontAwesome5 icon name (brand icons need a 'fab-' prefix)."
       show_footer_on_login_required_page:

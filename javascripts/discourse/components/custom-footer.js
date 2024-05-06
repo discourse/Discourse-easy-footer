@@ -5,24 +5,6 @@ export default class extends Component {
   mainHeading = settings.heading;
   blurb = settings.blurb;
 
-  smallLinks = settings.small_links
-    .split("|")
-    .filter(Boolean)
-    .map((link) => {
-      const fragments = link.split(",").map((fragment) => fragment.trim());
-      const text = fragments[0];
-      const dataName = dasherize(text);
-      const href = fragments[1];
-      const target = fragments[2] === "blank" ? "_blank" : "";
-
-      return {
-        text,
-        dataName,
-        href,
-        target,
-      };
-    });
-
   socialLinks = settings.social_links
     .split("|")
     .filter(Boolean)
