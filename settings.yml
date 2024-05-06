@@ -104,9 +104,58 @@ small_links:
           - _top
 
 social_links:
-  type: list
-  list_type: simple
-  default: "Facebook, Join us on Facebook, #, blank,fab-facebook|Twitter, show some love on Twitter, #, blank,fab-twitter| Youtube, Check out our latest videos on Youtube, #, blank,fab-youtube"
+  type: objects
+  default:
+    - text: Facebook
+      title: Join us on Facebook
+      url: "#"
+      target: _blank
+      icon_name: fab-facebook
+    - text: Twitter
+      title: Show some love on Twitter
+      url: "#"
+      target: _blank
+      icon_name: fab-twitter
+    - text: Youtube
+      title: Check out our latest videos on Youtube
+      url: "#"
+      target: _blank
+      icon_name: fab-youtube
+  schema:
+    name: social link
+    identifier: text
+    properties:
+      text:
+        type: string
+        required: true
+        validations:
+          min_length: 1
+          max_length: 1000
+      title:
+        type: string
+        validations:
+          min_length: 1
+          max_length: 1000
+      url:
+        type: string
+        required: true
+        validations:
+          min_length: 1
+          max_length: 2048
+          url: true
+      target:
+        type: string
+        default: _blank
+        choices:
+          - _blank
+          - _self
+          - _parent
+          - _top
+      icon_name:
+        type: string
+        validations:
+          min_length: 1
+          max_length: 200
 
 show_footer_on_login_required_page:
   default: true

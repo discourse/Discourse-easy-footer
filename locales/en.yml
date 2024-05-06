@@ -47,7 +47,25 @@ en:
               description: The target attribute of the link
 
       social_links:
-        description: "Enter the social links you'd like to add to the footer in this format:<br> provider, title, URL, target<br><b>Provider:</b> is the name of the provider like Facebook or Twitter<br><b>Title:</b> The text that shows when the link is hovered<br><b>URL:</b> The path you'd like the link to have<br><b>Target:</b> Use blank to open the link in a new tab and use self to open it in the same tab<br><b>Icon:</b> use a FontAwesome5 icon name (brand icons need a 'fab-' prefix)."
+        description: "Social links you'd like to add to the footer"
+        schema:
+          properties:
+            text:
+              label: Text
+              description: Text to be displayed for the link
+            title:
+              label: Title
+              description: The title attribute of the link
+            url:
+              label: URL
+              description: The URL the link points to
+            target:
+              label: Target
+              description: The target attribute of the link
+            icon_name:
+              label: Icon Name
+              description: FontAwesome5 icon name (brand icons need a 'fab-' prefix)
+
       show_footer_on_login_required_page:
         description: "Check this setting if you want the footer to be displayed on the login-required page (only applies if your site is private)"
       svg_icons:

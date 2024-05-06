@@ -60,15 +60,15 @@
         </div>
 
         <div class="social">
-          {{#each this.socialLinks as |link|}}
+          {{#each (theme-setting "social_links") as |link|}}
             <a
               class="social-link"
-              data-easyfooter-social-link={{link.dataName}}
+              data-easyfooter-social-link={{dasherize link.text}}
               title={{link.title}}
               target={{link.target}}
-              href={{link.href}}
+              href={{link.url}}
             >
-              {{d-icon link.icon}}
+              {{d-icon link.icon_name}}
             </a>
           {{/each}}
         </div>
