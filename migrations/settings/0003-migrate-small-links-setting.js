@@ -31,6 +31,8 @@ export default function migrate(settings, helpers) {
     });
 
     settings.set("small_links", newSmallLinks);
+  } else if (oldSmallLinks?.trim() === "") {
+    settings.set("small_links", []);
   }
 
   return settings;
