@@ -5,3 +5,71 @@
 # https://translate.discourse.org/
 
 de:
+  theme_metadata:
+    settings:
+      heading:
+        description: "Text für die Überschrift in der Fußzeile - du kannst zum Beispiel den Namen deiner Website verwenden - Maximale Länge 25 Zeichen"
+      blurb:
+        description: "Gib einen kurzen Text über deine Community ein - Maximale Länge 180 Zeichen"
+      sections:
+        description: "Abschnitte, die in der Fußzeile angezeigt werden sollen"
+        schema:
+          properties:
+            text:
+              label: Text
+              description: Text, der für den Abschnitt angezeigt werden soll
+            title:
+              label: Titel
+              description: Das Titel-Attribut des Abschnitts
+            links:
+              text:
+                label: Text
+                description: Text, der für den Link angezeigt werden soll
+              url:
+                label: URL
+                description: Die URL, auf die der Link verweist
+              target:
+                label: Target
+                description: Das Target-Attribut des Links
+              title:
+                label: Titel
+                description: Das Titel-Attribut des Links
+              referrer_policy:
+                label: Referrer Policy
+                description: Das Referrerpolicy-Attribut des Links
+      small_links:
+        description: "Kleine Links am unteren Ende der Fußzeile wie Nutzungsbedingungen und Datenschutz"
+        schema:
+          properties:
+            text:
+              label: Text
+              description: Text, der für den Link angezeigt werden soll
+            url:
+              label: URL
+              description: Die URL, auf die der Link verweist
+            target:
+              label: Target
+              description: Das Target-Attribut des Links
+      social_links:
+        description: "Social-Media-Links, die du in die Fußzeile einfügen möchtest"
+        schema:
+          properties:
+            text:
+              label: Text
+              description: Text, der für den Link angezeigt werden soll
+            title:
+              label: Titel
+              description: Das Titel-Attribut des Links
+            url:
+              label: URL
+              description: Die URL, auf die der Link verweist
+            target:
+              label: Target
+              description: Das Target-Attribut des Links
+            icon_name:
+              label: Symbolname
+              description: FontAwesome5-Symbolname (Markensymbole benötigen das Präfix „fab-“)
+      show_footer_on_login_required_page:
+        description: "Aktiviere diese Einstellung, wenn du möchtest, dass die Fußzeile auf der Seite angezeigt wird, auf der man sich anmeldet (gilt nur, wenn deine Website privat ist)."
+      svg_icons:
+        description: "Liste der FontAwesome 5-Symbole, die in der obigen Einstellung für soziale Links verwendet werden."
