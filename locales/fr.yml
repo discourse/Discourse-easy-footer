@@ -5,3 +5,71 @@
 # https://translate.discourse.org/
 
 fr:
+  theme_metadata:
+    settings:
+      heading:
+        description: "Texte du titre dans le pied de page (vous pouvez utiliser le nom de votre site, par exemple) : longueur maximale de 25 caractères"
+      blurb:
+        description: "Saisissez un court texte de présentation de votre communauté : longueur maximale de 180 caractères"
+      sections:
+        description: "Sections à afficher dans le pied de page"
+        schema:
+          properties:
+            text:
+              label: Texte
+              description: Texte à afficher pour la section
+            title:
+              label: Titre
+              description: L'attribut titre de la section
+            links:
+              text:
+                label: Texte
+                description: Texte à afficher pour le lien
+              url:
+                label: URL
+                description: L'URL vers laquelle pointe le lien
+              target:
+                label: Cible
+                description: L'attribut cible du lien
+              title:
+                label: Titre
+                description: L'attribut titre du lien
+              referrer_policy:
+                label: Politique de référencement
+                description: L'attribut referrerpolicy du lien
+      small_links:
+        description: "Petits liens en bas du pied de page, tels que Conditions d'utilisation et Confidentialité"
+        schema:
+          properties:
+            text:
+              label: Texte
+              description: Texte à afficher pour le lien
+            url:
+              label: URL
+              description: L'URL vers laquelle pointe le lien
+            target:
+              label: Cible
+              description: L'attribut cible du lien
+      social_links:
+        description: "Liens de réseaux sociaux que vous souhaitez ajouter au pied de page"
+        schema:
+          properties:
+            text:
+              label: Texte
+              description: Texte à afficher pour le lien
+            title:
+              label: Titre
+              description: L'attribut titre du lien
+            url:
+              label: URL
+              description: L'URL vers laquelle pointe le lien
+            target:
+              label: Cible
+              description: L'attribut cible du lien
+            icon_name:
+              label: Nom de l'icône
+              description: Nom de l'icône FontAwesome5 (les icônes de marque nécessitent un préfixe « fab- »)
+      show_footer_on_login_required_page:
+        description: "Cochez ce paramètre si vous souhaitez que le pied de page soit affiché sur la page de connexion requise (s'applique uniquement si votre site est privé)"
+      svg_icons:
+        description: "Liste des icônes FontAwesome 5 utilisées dans le paramètre de liens de réseaux sociaux ci-dessus."

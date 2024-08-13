@@ -5,3 +5,71 @@
 # https://translate.discourse.org/
 
 ar:
+  theme_metadata:
+    settings:
+      heading:
+        description: "نص العنوان الموجود في التذييل - يمكنك استخدام اسم موقعك على سبيل المثال - الحد الأقصى للطول: 25 حرفًا"
+      blurb:
+        description: "أدخل نبذة قصيرة عن مجتمعك - الحد الأقصى للطول: 180 حرفًا"
+      sections:
+        description: "الأقسام التي سيتم عرضها في التذييل"
+        schema:
+          properties:
+            text:
+              label: النص
+              description: النص الذي سيتم عرضه للقسم
+            title:
+              label: العنوان
+              description: سمة عنوان القسم
+            links:
+              text:
+                label: النص
+                description: النص الذي سيتم عرضه للرابط
+              url:
+                label: عنوان URL
+                description: عنوان URL الذي يشير إليه الرابط
+              target:
+                label: الهدف
+                description: السمة المستهدفة للرابط
+              title:
+                label: العنوان
+                description: سمة العنوان للرابط
+              referrer_policy:
+                label: سياسة المُحيل
+                description: سمة سياسة المُحيل للرابط
+      small_links:
+        description: "روابط صغيرة في أسفل التذييل، مثل شروط الخدمة والخصوصية"
+        schema:
+          properties:
+            text:
+              label: النص
+              description: النص الذي سيتم عرضه للرابط
+            url:
+              label: عنوان URL
+              description: عنوان URL الذي يشير إليه الرابط
+            target:
+              label: الهدف
+              description: السمة المستهدفة للرابط
+      social_links:
+        description: "روابط وسائل التواصل الاجتماعي التي ترغب في إضافتها إلى التذييل"
+        schema:
+          properties:
+            text:
+              label: النص
+              description: النص الذي سيتم عرضه للرابط
+            title:
+              label: العنوان
+              description: سمة العنوان للرابط
+            url:
+              label: عنوان URL
+              description: عنوان URL الذي يشير إليه الرابط
+            target:
+              label: الهدف
+              description: السمة المستهدفة للرابط
+            icon_name:
+              label: اسم الأيقونة
+              description: اسم أيقونة FontAwesome5 (تحتاج أيقونات العلامة التجارية إلى بادئة "fab-")
+      show_footer_on_login_required_page:
+        description: "حدِّد هذا الإعداد إذا كنت تريد عرض التذييل على الصفحة التي تتطلب تسجيل الدخول (لا ينطبق هذا الإعداد إلا إذا كان موقعك خاصًا)"
+      svg_icons:
+        description: "قائمة أيقونات FontAwesome 5 المُستخدَمة في إعداد روابط وسائل التواصل الاجتماعي أعلاه."

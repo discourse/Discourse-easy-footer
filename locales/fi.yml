@@ -5,3 +5,71 @@
 # https://translate.discourse.org/
 
 fi:
+  theme_metadata:
+    settings:
+      heading:
+        description: "Alatunnisteen otsikkoteksti – voit käyttää esimerkiksi sivustosi nimeä – enimmäispituus on 25 merkkiä"
+      blurb:
+        description: "Kirjoita lyhyt kuvaus yhteisöstäsi – enimmäispituus on 180 merkkiä"
+      sections:
+        description: "Alatunnisteessa näytettävät osiot"
+        schema:
+          properties:
+            text:
+              label: Teksti
+              description: Osiossa näytettävä teksti
+            title:
+              label: Otsikko
+              description: Osion otsikkomäärite
+            links:
+              text:
+                label: Teksti
+                description: Linkin näytettävä teksti
+              url:
+                label: URL
+                description: URL-osoite, johon linkki osoittaa
+              target:
+                label: Kohde
+                description: Linkin kohdemäärite
+              title:
+                label: Otsikko
+                description: Linkin otsikkomäärite
+              referrer_policy:
+                label: Viittauskäytäntö
+                description: Linkin referrerpolicy-määrite
+      small_links:
+        description: "Pienet linkit alatunnisteen alaosassa, kuten käyttöehdot ja tietosuojakäytäntö"
+        schema:
+          properties:
+            text:
+              label: Teksti
+              description: Linkin näytettävä teksti
+            url:
+              label: URL
+              description: URL-osoite, johon linkki osoittaa
+            target:
+              label: Kohde
+              description: Linkin kohdemäärite
+      social_links:
+        description: "Yhteisöpalvelulinkit, jotka haluat lisätä alatunnisteeseen"
+        schema:
+          properties:
+            text:
+              label: Teksti
+              description: Linkin näytettävä teksti
+            title:
+              label: Otsikko
+              description: Linkin otsikkomäärite
+            url:
+              label: URL
+              description: URL-osoite, johon linkki osoittaa
+            target:
+              label: Kohde
+              description: Linkin kohdemäärite
+            icon_name:
+              label: Kuvakkeen nimi
+              description: FontAwesome5-kuvakkeen nimi (tuotemerkkikuvakkeet tarvitsevat "fab-"-etuliitteen)
+      show_footer_on_login_required_page:
+        description: "Valitse tämä asetus, jos haluat, että alatunniste näytetään sisäänkirjautumista edellyttävällä sivulla (sovelletaan vain, jos sivustosi on yksityinen)"
+      svg_icons:
+        description: "Luettelo edeltävässä yhteisöpalvelulinkkiasetuksessa käytetyistä FontAwesome 5 -kuvakkeista."

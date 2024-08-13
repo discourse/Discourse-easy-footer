@@ -5,3 +5,71 @@
 # https://translate.discourse.org/
 
 ru:
+  theme_metadata:
+    settings:
+      heading:
+        description: "Текст для заголовка в нижнем колонтитуле — например, можно использовать название вашего сайта — максимальная длина 25 символов"
+      blurb:
+        description: "Введите краткую информацию о своем сообществе. Максимальная длина — 180 символов"
+      sections:
+        description: "Разделы, которые будут отображаться в нижнем колонтитуле"
+        schema:
+          properties:
+            text:
+              label: Текст
+              description: Текст, который будет отображаться для раздела
+            title:
+              label: Заголовок
+              description: Атрибут заголовка для раздела
+            links:
+              text:
+                label: Текст
+                description: Текст, который будет отображаться для ссылки
+              url:
+                label: URL
+                description: URL-адрес, на который указывает ссылка
+              target:
+                label: Target
+                description: Атрибут target для ссылки
+              title:
+                label: Заголовок
+                description: Атрибут заголовка для ссылки
+              referrer_policy:
+                label: Referrer Policy
+                description: Атрибут referrerpolicy ссылки
+      small_links:
+        description: "Небольшие ссылки в нижнем колонтитуле, такие как Условия использования и Политика конфиденциальности"
+        schema:
+          properties:
+            text:
+              label: Текст
+              description: Текст, который будет отображаться для ссылки
+            url:
+              label: URL
+              description: URL-адрес, на который указывает ссылка
+            target:
+              label: Target
+              description: Атрибут target для ссылки
+      social_links:
+        description: "Ссылки на соцсети, которые вы хотели бы добавить в нижний колонтитул"
+        schema:
+          properties:
+            text:
+              label: Текст
+              description: Текст, который будет отображаться для ссылки
+            title:
+              label: Заголовок
+              description: Атрибут заголовка для ссылки
+            url:
+              label: URL
+              description: URL-адрес, на который указывает ссылка
+            target:
+              label: Target
+              description: Атрибут target для ссылки
+            icon_name:
+              label: Имя значка
+              description: Имя значка FontAwesome5 (для брендовых значков требуется префикс 'fab-')
+      show_footer_on_login_required_page:
+        description: "Убедитесь, что этот параметр активирован, если хотите, чтобы нижний колонтитул отображался на странице входа (применимо только для приватных сайтов)"
+      svg_icons:
+        description: "Список значков FontAwesome 5, используемых в настройках ссылок на соцсети выше."

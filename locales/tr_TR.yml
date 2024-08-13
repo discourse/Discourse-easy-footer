@@ -5,3 +5,71 @@
 # https://translate.discourse.org/
 
 tr_TR:
+  theme_metadata:
+    settings:
+      heading:
+        description: "Alt bilgideki başlık için metin, örneğin sitenizin adını kullanabilirsiniz. Maksimum uzunluk 25 karakter"
+      blurb:
+        description: "Topluluğunuz hakkında kısa bir tanıtım girin. Maksimum uzunluk 180 karakter"
+      sections:
+        description: "Alt bilgide görüntülenecek bölümler"
+        schema:
+          properties:
+            text:
+              label: Metin
+              description: Bölüm için görüntülenecek metin
+            title:
+              label: Başlık
+              description: Bölümün başlık niteliği
+            links:
+              text:
+                label: Metin
+                description: Bağlantı için görüntülenecek metin
+              url:
+                label: URL
+                description: Bağlantının işaret ettiği URL
+              target:
+                label: Hedef
+                description: Bağlantının hedef niteliği
+              title:
+                label: Başlık
+                description: Bağlantının başlık niteliği
+              referrer_policy:
+                label: Referans Sahibi Politikası
+                description: Bağlantının referans sahibi politikası niteliği
+      small_links:
+        description: "Alt bilginin en altında Hizmet Koşulları ve Gizlilik gibi küçük bağlantılar"
+        schema:
+          properties:
+            text:
+              label: Metin
+              description: Bağlantı için görüntülenecek metin
+            url:
+              label: URL
+              description: Bağlantının işaret ettiği URL
+            target:
+              label: Hedef
+              description: Bağlantının hedef niteliği
+      social_links:
+        description: "Alt bilgiye eklemek istediğiniz sosyal bağlantılar"
+        schema:
+          properties:
+            text:
+              label: Metin
+              description: Bağlantı için görüntülenecek metin
+            title:
+              label: Başlık
+              description: Bağlantının başlık niteliği
+            url:
+              label: URL
+              description: Bağlantının işaret ettiği URL
+            target:
+              label: Hedef
+              description: Bağlantının hedef niteliği
+            icon_name:
+              label: Simge Adı
+              description: FontAwesome5 simge adı (marka simgelerinin 'fab-' ön ekine ihtiyacı vardır)
+      show_footer_on_login_required_page:
+        description: "Giriş gerektiren sayfada alt bilginin görüntülenmesini istiyorsanız bu ayarı işaretleyin (sadece siteniz gizliyse geçerlidir)"
+      svg_icons:
+        description: "Yukarıdaki sosyal bağlantılar ayarında kullanılan FontAwesome 5 simgelerinin listesi."

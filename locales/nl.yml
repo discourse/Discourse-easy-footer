@@ -5,3 +5,71 @@
 # https://translate.discourse.org/
 
 nl:
+  theme_metadata:
+    settings:
+      heading:
+        description: "Tekst voor de kop in de voettekst - je kunt bijvoorbeeld je sitenaam gebruiken - maximaal 25 tekens"
+      blurb:
+        description: "Voer een korte tekst in over je community - maximaal 180 tekens"
+      sections:
+        description: "Secties om weer te geven in de voettekst"
+        schema:
+          properties:
+            text:
+              label: Tekst
+              description: Tekst om weer te geven voor de sectie
+            title:
+              label: Titel
+              description: Het 'title'-attribuut van de sectie
+            links:
+              text:
+                label: Tekst
+                description: Tekst om weer te geven voor de link
+              url:
+                label: URL
+                description: De URL waarnaar de link verwijst
+              target:
+                label: Doel
+                description: Het 'target'-attribuut van de link
+              title:
+                label: Titel
+                description: Het 'title'-attribuut van de sectie
+              referrer_policy:
+                label: Verwijzerbeleid
+                description: Het 'referrerpolicy'-attribuut van de link
+      small_links:
+        description: "Kleine links onderaan de voettekst, zoals Gebruiksvoorwaarden en Privacybeleid"
+        schema:
+          properties:
+            text:
+              label: Tekst
+              description: Tekst om weer te geven voor de link
+            url:
+              label: URL
+              description: De URL waarnaar de link verwijst
+            target:
+              label: Doel
+              description: Het 'target'-attribuut van de link
+      social_links:
+        description: "Sociale links die je aan de voettekst wilt toevoegen"
+        schema:
+          properties:
+            text:
+              label: Tekst
+              description: Tekst om weer te geven voor de link
+            title:
+              label: Titel
+              description: Het 'title'-attribuut van de link
+            url:
+              label: URL
+              description: De URL waarnaar de link verwijst
+            target:
+              label: Doel
+              description: Het 'target'-attribuut van de link
+            icon_name:
+              label: Pictogramnaam
+              description: Font Awesome 5-pictogramnaam (merkpictogrammen moeten het voorvoegsel 'fab-' hebben)
+      show_footer_on_login_required_page:
+        description: "Selecteer deze instelling als je wilt dat de voettekst wordt weergegeven op de pagina waarvoor moe worden ingelogd (alleen van toepassing als je site privé is)"
+      svg_icons:
+        description: "Lijst van Font Awesome 5-pictogrammen die worden gebruikt in de bovenstaande instelling voor sociale links."

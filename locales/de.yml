@@ -8,9 +8,9 @@ de:
   theme_metadata:
     settings:
       heading:
-        description: "Text für die Überschrift in der Fußzeile - du kannst zum Beispiel den Namen deiner Website verwenden - Maximale Länge 25 Zeichen"
+        description: "Text für die Überschrift in der Fußzeile – du kannst zum Beispiel den Namen deiner Website verwenden – maximale Länge 25 Zeichen"
       blurb:
-        description: "Gib einen kurzen Text über deine Community ein - Maximale Länge 180 Zeichen"
+        description: "Gib einen kurzen Text über deine Community ein – maximale Länge 180 Zeichen"
       sections:
         description: "Abschnitte, die in der Fußzeile angezeigt werden sollen"
         schema:
@@ -36,9 +36,9 @@ de:
                 description: Das Titel-Attribut des Links
               referrer_policy:
                 label: Referrer Policy
-                description: Das Referrerpolicy-Attribut des Links
+                description: Das referrerpolicy-Attribut des Links
       small_links:
-        description: "Kleine Links am unteren Ende der Fußzeile wie Nutzungsbedingungen und Datenschutz"
+        description: "Kleine Links am unteren Ende der Fußzeile wie Nutzungsbedingungen und Datenschutzerklärung"
         schema:
           properties:
             text:
@@ -70,6 +70,6 @@ de:
               label: Symbolname
               description: FontAwesome5-Symbolname (Markensymbole benötigen das Präfix „fab-“)
       show_footer_on_login_required_page:
-        description: "Aktiviere diese Einstellung, wenn du möchtest, dass die Fußzeile auf der Seite angezeigt wird, auf der man sich anmeldet (gilt nur, wenn deine Website privat ist)."
+        description: "Aktiviere diese Einstellung, wenn du möchtest, dass die Fußzeile auf der Seite angezeigt wird, auf der man sich anmeldet (gilt nur, wenn deine Website privat ist)"
       svg_icons:
-        description: "Liste der FontAwesome 5-Symbole, die in der obigen Einstellung für soziale Links verwendet werden."
+        description: "Liste der FontAwesome 5-Symbole, die in der obigen Einstellung für Social-Media-Links verwendet werden."

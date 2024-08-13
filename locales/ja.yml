@@ -5,3 +5,71 @@
 # https://translate.discourse.org/
 
 ja:
+  theme_metadata:
+    settings:
+      heading:
+        description: "フッターの見出しのテキスト - サイト名などを使用できます - 最大 25 文字"
+      blurb:
+        description: "コミュニティーについての短い紹介文を挿入します - 最大 180 文字"
+      sections:
+        description: "フッターに表示されるセクション"
+        schema:
+          properties:
+            text:
+              label: テキスト
+              description: セクションに表示されるテキスト
+            title:
+              label: タイトル
+              description: セクションのタイトル属性
+            links:
+              text:
+                label: テキスト
+                description: リンクに表示されるテキスト
+              url:
+                label: URL
+                description: リンク先の URL
+              target:
+                label: ターゲット
+                description: リンクのターゲット属性
+              title:
+                label: タイトル
+                description: リンクのタイトル属性
+              referrer_policy:
+                label: リファラーポリシー
+                description: リンクのリファラーポリシー属性
+      small_links:
+        description: "利用規約やプライバシーなど、フッターの下にある小さなリンク"
+        schema:
+          properties:
+            text:
+              label: テキスト
+              description: リンクに表示されるテキスト
+            url:
+              label: URL
+              description: リンク先の URL
+            target:
+              label: ターゲット
+              description: リンクのターゲット属性
+      social_links:
+        description: "フッターに追加するソーシャルリンク"
+        schema:
+          properties:
+            text:
+              label: テキスト
+              description: リンクに表示されるテキスト
+            title:
+              label: タイトル
+              description: リンクのタイトル属性
+            url:
+              label: URL
+              description: リンク先の URL
+            target:
+              label: ターゲット
+              description: リンクのターゲット属性
+            icon_name:
+              label: アイコン名
+              description: FontAwesome5 アイコン名 (ブランドアイコンには「fab-」プレフィックスが必要です)
+      show_footer_on_login_required_page:
+        description: "ログインが必要なページにフッターを表示する場合はこの設定をオンにします (サイトが非公開である場合にのみ適用されます)"
+      svg_icons:
+        description: "上のソーシャルリンク設定で使用される FontAwesome5 アイコンのリスト。"
