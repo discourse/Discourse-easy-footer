@@ -5,3 +5,71 @@
 # https://translate.discourse.org/
 
 zh_CN:
+  theme_metadata:
+    settings:
+      heading:
+        description: "页脚中标题的文本 – 例如，您可以使用您的网站名称 – 最多 25 个字符"
+      blurb:
+        description: "输入关于您的社区的简短介绍 – 最多 180 个字符"
+      sections:
+        description: "页脚中显示的版块"
+        schema:
+          properties:
+            text:
+              label: 文本
+              description: 为版块显示的文本
+            title:
+              label: 标题
+              description: 版块的标题属性
+            links:
+              text:
+                label: 文本
+                description: 为链接显示的文本
+              url:
+                label: URL
+                description: 链接指向的 URL
+              target:
+                label: 目标
+                description: 链接的目标属性
+              title:
+                label: 标题
+                description: 链接的标题属性
+              referrer_policy:
+                label: 引荐来源网址政策
+                description: 链接的引荐来源网址政策属性
+      small_links:
+        description: "页脚底部的小链接，如《服务条款》和《隐私》"
+        schema:
+          properties:
+            text:
+              label: 文本
+              description: 为链接显示的文本
+            url:
+              label: URL
+              description: 链接指向的 URL
+            target:
+              label: 目标
+              description: 链接的目标属性
+      social_links:
+        description: "您要添加到页脚的社交链接"
+        schema:
+          properties:
+            text:
+              label: 文本
+              description: 为链接显示的文本
+            title:
+              label: 标题
+              description: 链接的标题属性
+            url:
+              label: URL
+              description: 链接指向的 URL
+            target:
+              label: 目标
+              description: 链接的目标属性
+            icon_name:
+              label: 图标名称
+              description: FontAwesome5 图标名称（品牌图标需要 'fab-' 前缀）
+      show_footer_on_login_required_page:
+        description: "如果您希望在需要登录的页面上显示页脚，请选中此设置（仅适用于您的网站为不公开网站的情况）"
+      svg_icons:
+        description: "上面的社交链接设置中使用的 FontAwesome 5 图标列表。"

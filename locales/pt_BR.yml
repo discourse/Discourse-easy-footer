@@ -5,3 +5,71 @@
 # https://translate.discourse.org/
 
 pt_BR:
+  theme_metadata:
+    settings:
+      heading:
+        description: "Texto para o cabeçalho no rodapé: você pode usar o nome do seu site, por exemplo. O tamanho máximo é 25 caracteres"
+      blurb:
+        description: "Insira uma breve descrição sobre sua comunidade. O tamanho máximo é 180 caracteres"
+      sections:
+        description: "Seções a serem exibidas no rodapé"
+        schema:
+          properties:
+            text:
+              label: Texto
+              description: Texto a ser exibido na seção
+            title:
+              label: Título
+              description: O atributo do título da seção
+            links:
+              text:
+                label: Texto
+                description: O texto a ser exibido para o link
+              url:
+                label: URL
+                description: A URL para a qual o link aponta
+              target:
+                label: Destino
+                description: O atributo de destino do link
+              title:
+                label: Título
+                description: O atributo do título do link
+              referrer_policy:
+                label: Política de indicação
+                description: O atributo da política de indicação do link
+      small_links:
+        description: "Links pequenos na parte inferior do rodapé, como Termos de Serviço e Política de Privacidade"
+        schema:
+          properties:
+            text:
+              label: Texto
+              description: Texto a ser exibido para o link
+            url:
+              label: URL
+              description: A URL para a qual o link aponta
+            target:
+              label: Destino
+              description: O atributo de destino do link
+      social_links:
+        description: "Links de redes sociais que você gostaria de adicionar ao rodapé"
+        schema:
+          properties:
+            text:
+              label: Texto
+              description: Texto a ser exibido para o link
+            title:
+              label: Título
+              description: O atributo do título do link
+            url:
+              label: URL
+              description: A URL para a qual o link aponta
+            target:
+              label: Destino
+              description: O atributo de destino do link
+            icon_name:
+              label: Nome do ícone
+              description: O nome do ícone de FontAwesome5 (ícones de marca precisam do prefixo "fab-")
+      show_footer_on_login_required_page:
+        description: "Verifique esta configuração se quiser que o rodapé seja exibido na página de solicitação de login (aplica-se apenas se o seu site for privado)"
+      svg_icons:
+        description: "A lista de ícones FontAwesome 5 usados nas configurações de links de redes sociais acima."

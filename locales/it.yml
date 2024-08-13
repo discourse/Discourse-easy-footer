@@ -5,3 +5,71 @@
 # https://translate.discourse.org/
 
 it:
+  theme_metadata:
+    settings:
+      heading:
+        description: "Testo per l'intestazione nel piè di pagina: ad esempio puoi utilizzare il nome del tuo sito. Lunghezza massima 25 caratteri"
+      blurb:
+        description: "Inserisci una breve descrizione della tua community: lunghezza massima 180 caratteri"
+      sections:
+        description: "Sezioni da visualizzare nel piè di pagina"
+        schema:
+          properties:
+            text:
+              label: Testo
+              description: Testo da visualizzare per la sezione
+            title:
+              label: Titolo
+              description: L'attributo titolo della sezione
+            links:
+              text:
+                label: Testo
+                description: Testo da visualizzare per il link
+              url:
+                label: URL
+                description: L'URL a cui punta il link
+              target:
+                label: Destinazione
+                description: L'attributo di destinazione del link
+              title:
+                label: Titolo
+                description: L'attributo titolo del link
+              referrer_policy:
+                label: Politica di riferimento
+                description: L'attributo referrerpolicy del collegamento
+      small_links:
+        description: "Link minori nella parte inferiore del piè di pagina come Termini di servizio e Privacy"
+        schema:
+          properties:
+            text:
+              label: Testo
+              description: Testo da visualizzare per il link
+            url:
+              label: URL
+              description: L'URL a cui punta il link
+            target:
+              label: Destinazione
+              description: L'attributo di destinazione del link
+      social_links:
+        description: "Link social che desideri aggiungere al piè di pagina"
+        schema:
+          properties:
+            text:
+              label: Testo
+              description: Testo da visualizzare per il link
+            title:
+              label: Titolo
+              description: L'attributo titolo del link
+            url:
+              label: URL
+              description: L'URL a cui punta il link
+            target:
+              label: Destinazione
+              description: L'attributo di destinazione del link
+            icon_name:
+              label: Nome dell'icona
+              description: Nome dell'icona FontAwesome5 (le icone del marchio necessitano di un prefisso "fab-")
+      show_footer_on_login_required_page:
+        description: "Controlla questa impostazione se desideri che il piè di pagina venga visualizzato nella pagina in cui è richiesto l'accesso (si applica solo se il tuo sito è privato)"
+      svg_icons:
+        description: "Elenco delle icone FontAwesome 5 utilizzate nell'impostazione dei collegamenti social sopra."
