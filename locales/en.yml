@@ -64,7 +64,7 @@ en:
               description: The target attribute of the link
             icon_name:
               label: Icon Name
-              description: FontAwesome6 icon name (brand icons need a 'fab-' prefix)
+              description: FontAwesome 6 icon name (brand icons need a 'fab-' prefix)
 
       show_footer_on_login_required_page:
         description: "Check this setting if you want the footer to be displayed on the login-required page (only applies if your site is private)"
