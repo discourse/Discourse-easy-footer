@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable RSpec/DescribeClass
 RSpec.describe "0004-migrate-social-links-setting migration" do
   let!(:theme) { upload_theme_component }
 
