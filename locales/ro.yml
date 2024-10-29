@@ -5,3 +5,12 @@
 # https://translate.discourse.org/
 
 ro:
+  theme_metadata:
+    settings:
+      social_links:
+        schema:
+          properties:
+            icon_name:
+              description: Nume icon FontAwesome 6 (iconurile de marcă au nevoie de prefixul „fab-”)
+      svg_icons:
+        description: "Lista iconurilor FontAwesome 6 utilizate în setarea legăturilor sociale de mai sus."

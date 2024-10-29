@@ -5,3 +5,71 @@
 # https://translate.discourse.org/
 
 he:
+  theme_metadata:
+    settings:
+      heading:
+        description: "טקסט לכותר העליון בכותרת התחתונה - אפשר להשתמש בשם האתר שלך לדוגמה - 25 תווים לכל היותר"
+      blurb:
+        description: "נא לספק תיאור קצר על הקהילה שלך - 180 תווים לכל היותר"
+      sections:
+        description: "קטעים שיוצגו בכותרת התחתונה"
+        schema:
+          properties:
+            text:
+              label: טקסט
+              description: טקסט שיוצג לקטע
+            title:
+              label: כותרת
+              description: מאפיין הכותרת של הקטע
+            links:
+              text:
+                label: טקסט
+                description: טקסט להצגה עבור הקישור
+              url:
+                label: כתובת
+                description: הכתובת אליה מפנה הקישור
+              target:
+                label: יעד
+                description: מאפיין היעד של הקישור
+              title:
+                label: כותרת
+                description: מאפיין הכותרת של הקישור
+              referrer_policy:
+                label: מדיניות הפניה
+                description: מאפיין ‚referrerpolicy’ (מדיניות הפניה) של הקישור
+      small_links:
+        description: "קישורים קטנים בתחתית הכותרת התחתונה כמו תנאי השירות והפרטיות"
+        schema:
+          properties:
+            text:
+              label: טקסט
+              description: טקסט להצגה עבור הקישור
+            url:
+              label: כתובת
+              description: הכתובת אליה מפנה הקישור
+            target:
+              label: יעד
+              description: מאפיין היעד של הקישור
+      social_links:
+        description: "קישורים חברתיים להוספה לכותרת התחתונה"
+        schema:
+          properties:
+            text:
+              label: טקסט
+              description: טקסט להצגה עבור הקישור
+            title:
+              label: כותרת
+              description: מאפיין הכותרת של הקישור
+            url:
+              label: כתובת
+              description: הכתובת אליה מפנה הקישור
+            target:
+              label: יעד
+              description: מאפיין היעד של הקישור
+            icon_name:
+              label: שם סמל
+              description: שם סמל ב־FontAwesome 6 (סמלי מותגים צריכים להיות עם קידומת ‚fab-‎’)
+      show_footer_on_login_required_page:
+        description: "יש לסמן את ההגדרה הזאת כדי שתופיע כותרת תחתונה במסך שדורש כניסה למערכת (תקף רק אם האתר שלך פרטי)"
+      svg_icons:
+        description: "רשימת סמלי FontAwesome 6 שנעשה בהם שימוש בהגדרת הקישורים החברתיים לעיל."

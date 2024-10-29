@@ -68,8 +68,7 @@ de:
               description: Das Target-Attribut des Links
             icon_name:
               label: Symbolname
-              description: FontAwesome5-Symbolname (Markensymbole benötigen das Präfix „fab-“)
       show_footer_on_login_required_page:
         description: "Aktiviere diese Einstellung, wenn du möchtest, dass die Fußzeile auf der Seite angezeigt wird, auf der man sich anmeldet (gilt nur, wenn deine Website privat ist)"
       svg_icons:
-        description: "Liste der FontAwesome 5-Symbole, die in der obigen Einstellung für Social-Media-Links verwendet werden."
+        description: "Liste der FontAwesome 6-Symbole, die in der obigen Einstellung für Social-Media-Links verwendet werden."
