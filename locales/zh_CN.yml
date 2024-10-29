@@ -68,8 +68,7 @@ zh_CN:
               description: 链接的目标属性
             icon_name:
               label: 图标名称
-              description: FontAwesome5 图标名称（品牌图标需要 'fab-' 前缀）
       show_footer_on_login_required_page:
         description: "如果您希望在需要登录的页面上显示页脚，请选中此设置（仅适用于您的网站为不公开网站的情况）"
       svg_icons:
-        description: "上面的社交链接设置中使用的 FontAwesome 5 图标列表。"
+        description: "上面的社交链接设置中使用的 FontAwesome 6 图标列表。"

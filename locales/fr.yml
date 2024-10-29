@@ -68,8 +68,7 @@ fr:
               description: L'attribut cible du lien
             icon_name:
               label: Nom de l'icône
-              description: Nom de l'icône FontAwesome5 (les icônes de marque nécessitent un préfixe « fab- »)
       show_footer_on_login_required_page:
         description: "Cochez ce paramètre si vous souhaitez que le pied de page soit affiché sur la page de connexion requise (s'applique uniquement si votre site est privé)"
       svg_icons:
-        description: "Liste des icônes FontAwesome 5 utilisées dans le paramètre de liens de réseaux sociaux ci-dessus."
+        description: "Liste des icônes FontAwesome 6 utilisées dans le paramètre de liens de réseaux sociaux ci-dessus."

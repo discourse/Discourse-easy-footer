@@ -68,8 +68,7 @@ it:
               description: L'attributo di destinazione del link
             icon_name:
               label: Nome dell'icona
-              description: Nome dell'icona FontAwesome5 (le icone del marchio necessitano di un prefisso "fab-")
       show_footer_on_login_required_page:
         description: "Controlla questa impostazione se desideri che il piè di pagina venga visualizzato nella pagina in cui è richiesto l'accesso (si applica solo se il tuo sito è privato)"
       svg_icons:
-        description: "Elenco delle icone FontAwesome 5 utilizzate nell'impostazione dei collegamenti social sopra."
+        description: "Elenco delle icone FontAwesome 6 utilizzate nell'impostazione dei collegamenti social sopra."
