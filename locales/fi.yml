@@ -68,6 +68,7 @@ fi:
               description: Linkin kohdemäärite
             icon_name:
               label: Kuvakkeen nimi
+              description: FontAwesome 6 -kuvakkeen nimi (tuotemerkkikuvakkeet tarvitsevat "fab-"-etuliitteen)
       show_footer_on_login_required_page:
         description: "Valitse tämä asetus, jos haluat, että alatunniste näytetään sisäänkirjautumista edellyttävällä sivulla (sovelletaan vain, jos sivustosi on yksityinen)"
       svg_icons:

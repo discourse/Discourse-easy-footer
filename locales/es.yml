@@ -68,6 +68,7 @@ es:
               description: El atributo de destino del enlace
             icon_name:
               label: Nombre del icono
+              description: Nombre del icono de FontAwesome 6 (los iconos de marca necesitan un prefijo «fab-»)
       show_footer_on_login_required_page:
         description: "Marca esta opción si quieres que se muestre el pie de página en la página de inicio de sesión (solo se aplica si tu sitio es privado)"
       svg_icons:
