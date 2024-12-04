@@ -68,6 +68,7 @@ ru:
               description: Атрибут target для ссылки
             icon_name:
               label: Имя значка
+              description: Имя значка FontAwesome 6 (для брендовых значков требуется префикс 'fab-')
       show_footer_on_login_required_page:
         description: "Убедитесь, что этот параметр активирован, если хотите, чтобы нижний колонтитул отображался на странице входа (применимо только для приватных сайтов)"
       svg_icons:

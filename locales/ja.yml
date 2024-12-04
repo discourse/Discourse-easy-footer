@@ -68,7 +68,8 @@ ja:
               description: リンクのターゲット属性
             icon_name:
               label: アイコン名
+              description: FontAwesome 6 アイコン名 (ブランドアイコンには「fab-」プレフィックスが必要です)
       show_footer_on_login_required_page:
         description: "ログインが必要なページにフッターを表示する場合はこの設定をオンにします (サイトが非公開である場合にのみ適用されます)"
       svg_icons:
-        description: "上のソーシャルリンク設定で使用される FontAwesome6 アイコンのリスト。"
+        description: "上のソーシャルリンク設定で使用される FontAwesome 6 アイコンのリスト。"

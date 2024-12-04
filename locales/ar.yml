@@ -68,6 +68,7 @@ ar:
               description: السمة المستهدفة للرابط
             icon_name:
               label: اسم الأيقونة
+              description: اسم أيقونة FontAwesome 6 (تحتاج أيقونات العلامة التجارية إلى بادئة "fab-")
       show_footer_on_login_required_page:
         description: "حدِّد هذا الإعداد إذا كنت تريد عرض التذييل على الصفحة التي تتطلب تسجيل الدخول (لا ينطبق هذا الإعداد إلا إذا كان موقعك خاصًا)"
       svg_icons:

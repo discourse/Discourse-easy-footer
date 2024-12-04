@@ -68,6 +68,7 @@ tr_TR:
               description: Bağlantının hedef niteliği
             icon_name:
               label: Simge Adı
+              description: FontAwesome 6 simge adı (marka simgelerinin 'fab-' ön ekine ihtiyacı vardır)
       show_footer_on_login_required_page:
         description: "Giriş gerektiren sayfada alt bilginin görüntülenmesini istiyorsanız bu ayarı işaretleyin (sadece siteniz gizliyse geçerlidir)"
       svg_icons:

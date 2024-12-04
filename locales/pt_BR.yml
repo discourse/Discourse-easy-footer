@@ -68,6 +68,7 @@ pt_BR:
               description: O atributo de destino do link
             icon_name:
               label: Nome do ícone
+              description: O nome do ícone de FontAwesome 6 (ícones de marca precisam do prefixo "fab-")
       show_footer_on_login_required_page:
         description: "Verifique esta configuração se quiser que o rodapé seja exibido na página de solicitação de login (aplica-se apenas se o seu site for privado)"
       svg_icons:

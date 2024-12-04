@@ -68,7 +68,8 @@ nl:
               description: Het 'target'-attribuut van de link
             icon_name:
               label: Pictogramnaam
+              description: FontAwesome 6-pictogramnaam (merkpictogrammen moeten het voorvoegsel 'fab-' hebben)
       show_footer_on_login_required_page:
         description: "Selecteer deze instelling als je wilt dat de voettekst wordt weergegeven op de pagina waarvoor moe worden ingelogd (alleen van toepassing als je site privé is)"
       svg_icons:
-        description: "Lijst van Font Awesome 6-pictogrammen die worden gebruikt in de bovenstaande instelling voor sociale links."
+        description: "Lijst van FontAwesome 6-pictogrammen die worden gebruikt in de bovenstaande instelling voor sociale links."
