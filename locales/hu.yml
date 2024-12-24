@@ -5,3 +5,71 @@
 # https://translate.discourse.org/
 
 hu:
+  theme_metadata:
+    settings:
+      heading:
+        description: "Szöveg a láblécben lévő fejléchez - használhatja például az oldal nevét - Max. 25 karakter"
+      blurb:
+        description: "Írjon be egy rövid összefoglalót a közösségről - Max. 180 karakter"
+      sections:
+        description: "A láblécben megjelenítendő részlegek"
+        schema:
+          properties:
+            text:
+              label: Szöveg
+              description: A részleghez megjelenítendő szöveg
+            title:
+              label: Cím
+              description: A részleg címének attribútuma
+            links:
+              text:
+                label: Szöveg
+                description: A részleghez megjelenítendő link
+              url:
+                label: URL
+                description: Az URL, amelyre a link mutat
+              target:
+                label: Target
+                description: A hivatkozás célattribútuma
+              title:
+                label: Cím
+                description: A részleg címének linkje
+              referrer_policy:
+                label: Ajánlási szabályzat
+                description: Ajánlási szabályzat link attribútuma
+      small_links:
+        description: "Kis linkek a lábléc alján, mint például az Általános Szerződési Feltételek és az Adatvédelem"
+        schema:
+          properties:
+            text:
+              label: Szöveg
+              description: A részleghez megjelenítendő link
+            url:
+              label: URL
+              description: Az URL, amelyre a link mutat
+            target:
+              label: Target
+              description: A hivatkozás célattribútuma
+      social_links:
+        description: "A láblécben elhelyezni kívánt közösségi linkek"
+        schema:
+          properties:
+            text:
+              label: Szöveg
+              description: A részleghez megjelenítendő link
+            title:
+              label: Cím
+              description: A részleg címének linkje
+            url:
+              label: URL
+              description: Az URL, amelyre a link mutat
+            target:
+              label: Target
+              description: A hivatkozás célattribútuma
+            icon_name:
+              label: Ikon neve
+              description: FontAwesome 6 ikon neve (a márka ikonjaihoz "fab-" előtag szükséges)
+      show_footer_on_login_required_page:
+        description: "Jelölje be ezt a beállítást, ha azt szeretné, hogy a lábléc megjelenjen a bejelentkezéshez szükséges oldalon (csak akkor érvényes, ha a webhely privát)"
+      svg_icons:
+        description: "A fenti közösségi linkek beállításában használt FontAwesome 6 ikonok listája."
