@@ -2,9 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   background: var(--primary);
+
   .wrap {
     box-sizing: border-box;
   }
+
   .flexbox {
     width: 100%;
     display: flex;
@@ -12,44 +14,54 @@
     color: var(--secondary);
     padding: 2em 0 1em 0;
   }
+
   .first-box {
     max-width: 20%;
+
     .heading {
       font-size: $font-up-2;
       font-weight: bold;
       margin-bottom: 0.5em;
       display: block;
     }
+
     .blurb {
       color: var(--secondary-high);
     }
   }
+
   .second-box {
     flex: 1;
+
     .links {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-end;
+
       ul {
         list-style: none;
         margin: 0;
         min-width: 100px;
       }
+
       li {
         margin: 0.5em 0;
       }
     }
   }
+
   .third-box {
     width: 100%;
     display: flex;
     align-items: center;
     border-top: 1px solid rgba(var(--primary-low-rgb), 0.05);
+
     .social {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: flex-end;
+
       .social-link {
         margin: 20px 10px;
         display: flex;
@@ -65,33 +77,41 @@
         }
       }
     }
+
     .small-link {
       color: var(--secondary-high);
       margin: 0 0.25em;
       font-size: $font-down-2;
     }
   }
+
   .footer-links {
     flex: 1;
   }
+
   .list span {
     font-weight: bold;
   }
+
   .footer-section-link-wrapper a {
     color: var(--secondary-high);
   }
+
   .list {
     margin: 1em;
     margin-top: 0;
   }
+
   .d-icon {
     margin-right: 5px;
     opacity: 0.7;
     min-width: 16px;
     text-align: center;
+
     &.fa-none {
       min-width: unset;
     }
+
     .rtl & {
       margin-right: 0;
       margin-left: 5px;
@@ -117,16 +137,20 @@
         align-items: center;
       }
     }
+
     .third-box {
       margin-top: 0.5em;
     }
+
     .second-box .links {
       justify-content: space-between;
     }
+
     .list {
       margin: 0;
       margin-top: 1em;
     }
+
     .first-box,
     .second-box,
     .third-box {
@@ -140,6 +164,7 @@
     .first-box {
       width: 100%;
     }
+
     .list {
       margin-top: 1em;
       display: inline-block;
@@ -147,6 +172,7 @@
       min-width: 50%;
       font-size: $font-up-1;
     }
+
     .links {
       display: inline-block;
     }
