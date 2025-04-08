@@ -5,3 +5,71 @@
 # https://translate.discourse.org/
 
 pl_PL:
+  theme_metadata:
+    settings:
+      heading:
+        description: "Tekst nagłówka w stopce - możesz użyć na przykład nazwy swojej witryny - maksymalna długość 25 znaków"
+      blurb:
+        description: "Wprowadź krótki opis swojej społeczności - maksymalna długość 180 znaków"
+      sections:
+        description: "Sekcje wyświetlane w stopce"
+        schema:
+          properties:
+            text:
+              label: Tekst
+              description: Tekst wyświetlany dla sekcji
+            title:
+              label: Tytuł
+              description: Atrybut tytułu sekcji
+            links:
+              text:
+                label: Tekst
+                description: Tekst, który ma być wyświetlany dla linku
+              url:
+                label: URL
+                description: Adres URL, na który wskazuje łącze
+              target:
+                label: Cel
+                description: Atrybut docelowy linku
+              title:
+                label: Tytuł
+                description: Atrybut title linku
+              referrer_policy:
+                label: Zasady odsyłania
+                description: Atrybut referrerpolicy linku
+      small_links:
+        description: "Małe linki na dole stopki, takie jak Warunki korzystania z usługi i Polityka prywatności"
+        schema:
+          properties:
+            text:
+              label: Tekst
+              description: Tekst, który ma być wyświetlany dla linku
+            url:
+              label: URL
+              description: Adres URL, na który wskazuje łącze
+            target:
+              label: Cel
+              description: Atrybut docelowy linku
+      social_links:
+        description: "Linki społecznościowe, które chcesz dodać do stopki"
+        schema:
+          properties:
+            text:
+              label: Tekst
+              description: Tekst, który ma być wyświetlany dla linku
+            title:
+              label: Tytuł
+              description: Atrybut title linku
+            url:
+              label: URL
+              description: Adres URL, na który wskazuje łącze
+            target:
+              label: Cel
+              description: Atrybut docelowy linku
+            icon_name:
+              label: Nazwa ikony
+              description: Nazwa ikony FontAwesome 6 (ikony marki wymagają przedrostka "fab-")
+      show_footer_on_login_required_page:
+        description: "Zaznacz to ustawienie, jeśli chcesz, aby stopka była wyświetlana na stronie wymagającej logowania (dotyczy tylko sytuacji, gdy witryna jest prywatna)."
+      svg_icons:
+        description: "Lista ikon FontAwesome 6 używanych w powyższym ustawieniu linków społecznościowych."
