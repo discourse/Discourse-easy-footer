@@ -112,17 +112,34 @@ RSpec.describe "Footer", system: true do
 
     visit("/")
 
-    expect(page).to have_css(".below-footer-outlet.custom-footer")
+    expect(page).to have_css(".below-footer-outlet.custom-footer .wrap")
   end
 
   it "should not display the footer to anon users when `show_footer_on_login_required_page` is false" do
     SiteSetting.login_required = true
 
     theme.update_setting(:show_footer_on_login_required_page, false)
+    theme.update_setting(
+      :sections,
+      [
+        {
+          text: "Section 1",
+          title: "Section 1 title",
+          links: [
+            {
+              text: "Section 1 Link",
+              url: "http://some.url.com/section1/link1",
+              title: "Section 1 Link Title",
+              referrer_policy: "origin",
+            },
+          ],
+        },
+      ],
+    )
     theme.save!
 
     visit("/")
 
-    expect(page).not_to have_css(".below-footer-outlet.custom-footer")
+    expect(page).to have_no_css(".below-footer-outlet.custom-footer .wrap")
   end
 end
