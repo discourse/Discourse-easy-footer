@@ -2,7 +2,6 @@ import Component from "@glimmer/component";
 import PluginOutlet from "discourse/components/plugin-outlet";
 import icon from "discourse/helpers/d-icon";
 import dasherize from "discourse/helpers/dasherize";
-import themeSetting from "discourse/helpers/theme-setting";
 
 export default class extends Component {
   mainHeading = settings.heading;
@@ -23,7 +22,7 @@ export default class extends Component {
           <div class="second-box">
             <PluginOutlet @name="easy-footer-second-box">
               <div class="links">
-                {{#each (themeSetting "sections") as |section|}}
+                {{#each settings.sections as |section|}}
                   <div
                     class="list"
                     data-easyfooter-section={{dasherize section.text}}
@@ -58,7 +57,7 @@ export default class extends Component {
 
           <div class="third-box">
             <div class="footer-links">
-              {{#each (themeSetting "small_links") as |link|}}
+              {{#each settings.small_links as |link|}}
                 <a
                   class="small-link"
                   data-easyfooter-small-link={{dasherize link.text}}
@@ -71,7 +70,7 @@ export default class extends Component {
             </div>
 
             <div class="social">
-              {{#each (themeSetting "social_links") as |link|}}
+              {{#each settings.social_links as |link|}}
                 <a
                   class="social-link"
                   data-easyfooter-social-link={{dasherize link.text}}
