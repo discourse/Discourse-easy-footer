@@ -7,6 +7,10 @@ export default class extends Component {
   mainHeading = settings.heading;
   blurb = settings.blurb;
 
+  getLinkClasses(link) {
+    return `small-link${link.css_class ? ` ${link.css_class}` : ''}`;
+  }
+
   <template>
     {{#if @showFooter}}
       <div class="wrap">
@@ -59,7 +63,7 @@ export default class extends Component {
             <div class="footer-links">
               {{#each settings.small_links as |link|}}
                 <a
-                  class="small-link"
+                  class={{this.getLinkClasses link}}
                   data-easyfooter-small-link={{dasherize link.text}}
                   target={{link.target}}
                   href={{link.url}}

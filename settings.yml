@@ -102,6 +102,11 @@ small_links:
           - _self
           - _parent
           - _top
+      css_class:
+        type: string
+        validations:
+          min: 1
+          max: 200
 
 social_links:
   type: objects
