@@ -8,7 +8,7 @@ export default class extends Component {
   blurb = settings.blurb;
 
   getLinkClasses(link) {
-    return `small-link${link.css_class ? ` ${link.css_class}` : ''}`;
+    return `small-link${link.css_class ? ` ${link.css_class}` : ""}`;
   }
 
   <template>
