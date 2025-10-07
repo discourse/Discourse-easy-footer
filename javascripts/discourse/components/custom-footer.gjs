@@ -1,5 +1,6 @@
 import Component from "@glimmer/component";
 import PluginOutlet from "discourse/components/plugin-outlet";
+import concatClass from "discourse/helpers/concat-class";
 import icon from "discourse/helpers/d-icon";
 import dasherize from "discourse/helpers/dasherize";
 
@@ -59,7 +60,7 @@ export default class extends Component {
             <div class="footer-links">
               {{#each settings.small_links as |link|}}
                 <a
-                  class="small-link"
+                  class={{concatClass "small-link" link.css_class}}
                   data-easyfooter-small-link={{dasherize link.text}}
                   target={{link.target}}
                   href={{link.url}}

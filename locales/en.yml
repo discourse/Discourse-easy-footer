@@ -45,6 +45,9 @@ en:
             target:
               label: Target
               description: The target attribute of the link
+            css_class:
+              label: CSS Class
+              description: Optional additional CSS class to apply to the link (e.g., 'custom-class')
 
       social_links:
         description: "Social links you'd like to add to the footer"
