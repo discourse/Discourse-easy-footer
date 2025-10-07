@@ -1,7 +1,7 @@
 import Component from "@glimmer/component";
 import PluginOutlet from "discourse/components/plugin-outlet";
-import icon from "discourse/helpers/d-icon";
 import concatClass from "discourse/helpers/concat-class";
+import icon from "discourse/helpers/d-icon";
 import dasherize from "discourse/helpers/dasherize";
 
 export default class extends Component {
