@@ -50,6 +50,9 @@ he:
             target:
               label: יעד
               description: מאפיין היעד של הקישור
+            css_class:
+              label: מחלקת CSS
+              description: 'מחלקת CSS נוספת כרשות להחלה על הקישור (למשל: ‚custom-class’)'
       social_links:
         description: "קישורים חברתיים להוספה לכותרת התחתונה"
         schema:
