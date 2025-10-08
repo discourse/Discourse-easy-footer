@@ -147,11 +147,7 @@ RSpec.describe "Footer", system: true do
     theme.update_setting(
       :small_links,
       [
-        {
-          text: "Privacy",
-          url: "#",
-          target: "_blank",
-        },
+        { text: "Privacy", url: "#", target: "_blank" },
         {
           text: "Terms",
           url: "https://example.com/terms",
@@ -169,9 +165,11 @@ RSpec.describe "Footer", system: true do
       expect(page).to have_css("a.small-link[href='#'][target='_blank']", text: "Privacy")
       expect(page).to have_no_css("a.small-link.custom-class", text: "Privacy")
 
-
       # Terms link should have both small-link and custom-class classes
-      expect(page).to have_css("a.small-link.custom-class[href='https://example.com/terms'][target='_blank']", text: "Terms")
+      expect(page).to have_css(
+        "a.small-link.custom-class[href='https://example.com/terms'][target='_blank']",
+        text: "Terms",
+      )
     end
   end
 end
