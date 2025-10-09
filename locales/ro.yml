@@ -7,6 +7,12 @@
 ro:
   theme_metadata:
     settings:
+      small_links:
+        schema:
+          properties:
+            css_class:
+              label: Clasă CSS
+              description: Clasă CSS suplimentară opțională de aplicat legăturii (de exemplu, „clasă-personalizată”)
       social_links:
         schema:
           properties:

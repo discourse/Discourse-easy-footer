@@ -50,6 +50,9 @@ de:
             target:
               label: Target
               description: Das Target-Attribut des Links
+            css_class:
+              label: CSS-Klasse
+              description: Optionale zusätzliche CSS-Klasse, die auf den Link angewendet werden soll (z. B. „custom-class“)
       social_links:
         description: "Social-Media-Links, die du in die Fußzeile einfügen möchtest"
         schema:
