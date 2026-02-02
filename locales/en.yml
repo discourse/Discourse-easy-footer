@@ -1,6 +1,8 @@
 en:
   theme_metadata:
     settings:
+      localized_footer_content:
+        description: "List of localized footer content configurations. The system will try to match the user's locale (e.g. 'fr' or 'en_US') with the 'locale' field defined here. If no match is found, the default settings below will be used."
       heading:
         description: "Text for the heading in the footer - you can use your site name for example - Max length 25 characters"
       blurb:
@@ -73,4 +75,3 @@ en:
         description: "Check this setting if you want the footer to be displayed on the login-required page (only applies if your site is private)"
       svg_icons:
         description: "List of FontAwesome 6 icons used in the social links setting above."
-
