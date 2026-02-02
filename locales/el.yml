@@ -5,3 +5,49 @@
 # https://translate.discourse.org/
 
 el:
+  theme_metadata:
+    settings:
+      sections:
+        schema:
+          properties:
+            text:
+              label: Κείμενο
+              description: Κείμενο που θα εμφανίζεται για την ενότητα
+            title:
+              label: Τίτλος
+            links:
+              text:
+                label: Κείμενο
+              url:
+                label: URL
+              target:
+                label: Στόχος
+              title:
+                label: Τίτλος
+      small_links:
+        schema:
+          properties:
+            text:
+              label: Κείμενο
+            url:
+              label: URL
+            target:
+              label: Στόχος
+            css_class:
+              label: Κλάση CSS
+      social_links:
+        schema:
+          properties:
+            text:
+              label: Κείμενο
+              description: Κείμενο που θα εμφανίζεται για τον σύνδεσμο
+            title:
+              label: Τίτλος
+            url:
+              label: URL
+            target:
+              label: Στόχος
+            icon_name:
+              label: Όνομα εικονιδίου
+      svg_icons:
+        description: "Λίστα εικονιδίων FontAwesome 6 που χρησιμοποιούνται στην παραπάνω ρύθμιση κοινωνικών συνδέσμων."
