@@ -1,3 +1,152 @@
+localized_footer_content:
+  type: objects
+  default: []
+  schema:
+    name: localized content
+    identifier: locale
+    properties:
+      locale:
+        type: string
+        required: true
+        validations:
+          min_length: 2
+          max_length: 10
+      heading:
+        type: string
+        validations:
+          max_length: 250
+      blurb:
+        type: string
+        textarea: true
+        validations:
+          max_length: 2000
+      sections:
+        type: objects
+        schema:
+          name: link section
+          identifier: text
+          properties:
+            text:
+              type: string
+              required: true
+              validations:
+                min_length: 1
+                max_length: 1000
+            title:
+              type: string
+              validations:
+                min_length: 1
+                max_length: 1000
+            links:
+              type: objects
+              schema:
+                name: link
+                identifier: text
+                properties:
+                  text:
+                    type: string
+                    required: true
+                    validations:
+                      min_length: 1
+                      max_length: 1000
+                  url:
+                    type: string
+                    required: true
+                    validations:
+                      min_length: 1
+                      max_length: 2048
+                  target:
+                    type: enum
+                    default: _blank
+                    choices:
+                      - _blank
+                      - _self
+                      - _parent
+                      - _top
+                  title:
+                    type: string
+                    validations:
+                      min_length: 1
+                      max_length: 1000
+                  referrer_policy:
+                    type: enum
+                    default: no-referrer-when-downgrade
+                    choices:
+                      - no-referrer
+                      - no-referrer-when-downgrade
+                      - origin
+                      - origin-when-cross-origin
+                      - unsafe-url
+      small_links:
+        type: objects
+        schema:
+          name: small link
+          identifier: text
+          properties:
+            text:
+              type: string
+              required: true
+              validations:
+                min: 1
+                max: 1000
+            url:
+              type: string
+              required: true
+              validations:
+                min: 1
+                max: 2048
+                url: true
+            target:
+              type: enum
+              default: _blank
+              choices:
+                - _blank
+                - _self
+                - _parent
+                - _top
+            css_class:
+              type: string
+              validations:
+                min: 1
+                max: 50
+      social_links:
+        type: objects
+        schema:
+          name: social link
+          identifier: text
+          properties:
+            text:
+              type: string
+              required: true
+              validations:
+                min_length: 1
+                max_length: 1000
+            title:
+              type: string
+              validations:
+                min_length: 1
+                max_length: 1000
+            url:
+              type: string
+              required: true
+              validations:
+                min_length: 1
+                max_length: 2048
+                url: true
+            target:
+              type: string
+              default: _blank
+              choices:
+                - _blank
+                - _self
+                - _parent
+                - _top
+            icon_name:
+              type: string
+              validations:
+                min_length: 1
+                max_length: 200
+
 heading:
   default: "This is a header"
   max: 25
