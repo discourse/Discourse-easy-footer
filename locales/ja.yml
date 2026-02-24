@@ -50,6 +50,9 @@ ja:
             target:
               label: ターゲット
               description: リンクのターゲット属性
+            css_class:
+              label: CSS クラス
+              description: 'リンクに適用するオプションの追加 CSS クラス (例: ''custom-class'')'
       social_links:
         description: "フッターに追加するソーシャルリンク"
         schema:
