@@ -50,6 +50,9 @@ zh_CN:
             target:
               label: 目标
               description: 链接的目标属性
+            css_class:
+              label: CSS 类
+              description: 应用于链接的可选附加 CSS 类（例如，'custom-class'）
       social_links:
         description: "您要添加到页脚的社交链接"
         schema:

@@ -50,6 +50,9 @@ ar:
             target:
               label: الهدف
               description: السمة المستهدفة للرابط
+            css_class:
+              label: فئة CSS
+              description: فئة CSS إضافية اختيارية لتطبيقها على الرابط (على سبيل المثال، 'custom-class')
       social_links:
         description: "روابط وسائل التواصل الاجتماعي التي ترغب في إضافتها إلى التذييل"
         schema:
