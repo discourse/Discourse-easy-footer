@@ -50,6 +50,9 @@ tr_TR:
             target:
               label: Hedef
               description: Bağlantının hedef niteliği
+            css_class:
+              label: CSS Sınıfı
+              description: Bağlantıya uygulanacak isteğe bağlı ek CSS sınıfı (örneğin, ‘custom-class’)
       social_links:
         description: "Alt bilgiye eklemek istediğiniz sosyal bağlantılar"
         schema:
