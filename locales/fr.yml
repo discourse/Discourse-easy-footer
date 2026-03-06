@@ -7,6 +7,8 @@
 fr:
   theme_metadata:
     settings:
+      localized_footer_content:
+        description: "Liste des configurations des contenus de pied de page localisé. Le système essaiera de faire correspondre la langue de l'utilisateur (par exemple 'fr' ou 'en_US') avec le champ 'locale' défini ici. Si aucune correspondance n'est trouvée, les paramètres par défaut ci-dessous seront utilisés."
       heading:
         description: "Texte du titre dans le pied de page (vous pouvez utiliser le nom de votre site, par exemple) : longueur maximale de 25 caractères"
       blurb:
