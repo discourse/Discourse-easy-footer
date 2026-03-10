@@ -50,6 +50,9 @@ pt_BR:
             target:
               label: Destino
               description: O atributo de destino do link
+            css_class:
+              label: Classe CSS
+              description: 'Classe CSS adicional opcional para aplicar ao link (ex.: ''custom-class'')'
       social_links:
         description: "Links de redes sociais que você gostaria de adicionar ao rodapé"
         schema:
