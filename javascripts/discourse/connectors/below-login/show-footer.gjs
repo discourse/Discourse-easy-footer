@@ -1,3 +1,4 @@
+/* eslint-disable ember/no-classic-components */
 import Component from "@ember/component";
 import { tagName } from "@ember-decorators/component";
 import hideApplicationFooter from "discourse/helpers/hide-application-footer";

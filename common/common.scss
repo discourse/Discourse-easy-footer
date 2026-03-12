@@ -184,9 +184,8 @@
 }
 
 // Avoids an issue with the Horizon theme
-
 .experimental-screen__bottom-left,
-.experimental-screen__bottom-right, 
-.experimental-screen__bottom-bar  {
+.experimental-screen__bottom-right,
+.experimental-screen__bottom-bar {
   display: none;
 }
