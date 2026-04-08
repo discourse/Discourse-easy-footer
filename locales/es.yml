@@ -50,6 +50,9 @@ es:
             target:
               label: Destino
               description: El atributo de destino del enlace
+            css_class:
+              label: Clase CSS
+              description: Clase CSS adicional opcional para aplicar al enlace (por ejemplo, «custom-class»).
       social_links:
         description: "Enlaces sociales que te gustaría añadir al pie de página"
         schema:
