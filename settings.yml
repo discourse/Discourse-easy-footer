@@ -162,10 +162,18 @@ social_links:
           min_length: 1
           max_length: 200
 
+google_play_store_url:
+  default: ""
+  type: string
+
+google_play_button_text:
+  default: "Get it on Google Play"
+  type: string
+
 show_footer_on_login_required_page:
   default: true
 
 svg_icons:
-  default: "fab-facebook|fab-twitter|fab-youtube"
+  default: "fab-facebook|fab-twitter|fab-youtube|fab-google-play"
   type: "list"
   list_type: "compact"
