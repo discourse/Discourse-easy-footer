@@ -1,11 +1,3 @@
-heading:
-  default: "This is a header"
-  max: 25
-
-blurb:
-  default: "Ius vitae ornatus at, ei mea sumo quot dicant. Ei tale democritum eos, in mea timeam accumsan forensibus. Ei his aperiam suavitate. Et debitis convenire sea, viris dictas latine."
-  max: 180
-
 sections:
   type: objects
   default: []

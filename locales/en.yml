@@ -1,4 +1,6 @@
 en:
+  heading: "Welcome to our community"
+  blurb: "Join our community to connect with others, share your ideas, and discover new content."
   theme_metadata:
     settings:
       heading:

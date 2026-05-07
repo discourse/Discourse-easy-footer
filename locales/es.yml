@@ -5,6 +5,8 @@
 # https://translate.discourse.org/
 
 es:
+  heading: "Bienvenido a nuestra comunidad"
+  blurb: "Unete a nuestra comunidad para conectarte con otros, compartir tus ideas y descubrir nuevos contenidos."
   theme_metadata:
     settings:
       heading:
