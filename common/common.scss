@@ -2,6 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   background: var(--primary);
+  margin-top: 2em;
+  border-top: 3px solid var(--tertiary);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
 
   .wrap {
     box-sizing: border-box;
