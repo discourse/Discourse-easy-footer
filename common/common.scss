@@ -78,6 +78,37 @@
       }
     }
 
+    .google-play-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      padding: 0.6em 1.2em;
+      margin: 20px 10px;
+      background-color: var(--secondary);
+      color: var(--primary);
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: $font-down-1;
+      text-decoration: none;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+
+      &:hover {
+        background-color: var(--secondary-high);
+        transform: translateY(-1px);
+      }
+
+      .d-icon {
+        color: var(--primary);
+        min-width: unset;
+        margin: 0;
+        font-size: $font-up-1;
+      }
+
+      span {
+        white-space: nowrap;
+      }
+    }
+
     .small-link {
       color: var(--secondary-high);
       margin: 0 0.25em;

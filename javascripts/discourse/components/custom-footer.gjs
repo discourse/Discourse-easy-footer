@@ -7,6 +7,12 @@ import dasherize from "discourse/helpers/dasherize";
 export default class extends Component {
   mainHeading = settings.heading;
   blurb = settings.blurb;
+  googlePlayStoreUrl = settings.google_play_store_url;
+  googlePlayButtonText = settings.google_play_button_text;
+
+  get showGooglePlayButton() {
+    return this.googlePlayStoreUrl && this.googlePlayStoreUrl.trim() !== "";
+  }
 
   <template>
     {{#if @showFooter}}
@@ -83,6 +89,19 @@ export default class extends Component {
                 </a>
               {{/each}}
             </div>
+
+            {{#if this.showGooglePlayButton}}
+              <a
+                class="google-play-button"
+                href={{this.googlePlayStoreUrl}}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={{this.googlePlayButtonText}}
+              >
+                {{icon "fab-google-play"}}
+                <span>{{this.googlePlayButtonText}}</span>
+              </a>
+            {{/if}}
           </div>
         </div>
       </div>
