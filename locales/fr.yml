@@ -66,9 +66,13 @@ fr:
             target:
               label: Cible
               description: L'attribut cible du lien
-            icon_name:
+icon_name:
               label: Nom de l'icône
-              description: Nom de l'icône FontAwesome 6 (les icônes de marque nécessitent un préfixe « fab- »)
+              description: Nom de l'icône FontAwesome 6 (les icônes de marque nécessitent un préfixe « fab- »)
+      google_play_store_url:
+        description: "URL de votre application sur le Google Play Store. Laissez vide pour masquer le bouton."
+      google_play_button_text:
+        description: "Texte à afficher sur le bouton Google Play Store."
       show_footer_on_login_required_page:
         description: "Cochez ce paramètre si vous souhaitez que le pied de page soit affiché sur la page de connexion requise (s'applique uniquement si votre site est privé)"
       svg_icons:

@@ -72,6 +72,10 @@ es:
             icon_name:
               label: Nombre del icono
               description: Nombre del icono de FontAwesome 6 (los iconos de marca necesitan un prefijo «fab-»)
+      google_play_store_url:
+        description: "URL de tu aplicación en Google Play Store. Deja vacío para ocultar el botón."
+      google_play_button_text:
+        description: "Texto a mostrar en el botón de Google Play Store."
       show_footer_on_login_required_page:
         description: "Marca esta opción si quieres que se muestre el pie de página en la página de inicio de sesión (solo se aplica si tu sitio es privado)"
       svg_icons:
