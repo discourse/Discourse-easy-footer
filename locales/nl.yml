@@ -50,6 +50,9 @@ nl:
             target:
               label: Doel
               description: Het 'target'-attribuut van de link
+            css_class:
+              label: CSS-klasse
+              description: Optionele extra CSS-klasse om toe te passen op de link (bijvoorbeeld 'custom-class')
       social_links:
         description: "Sociale links die je aan de voettekst wilt toevoegen"
         schema:
