@@ -4,9 +4,29 @@ import concatClass from "discourse/helpers/concat-class";
 import icon from "discourse/helpers/d-icon";
 import dasherize from "discourse/helpers/dasherize";
 
+
 export default class extends Component {
-  mainHeading = settings.heading;
-  blurb = settings.blurb;
+  get activeSettings() {
+    const currentLocale = I18n.currentLocale();
+    const localizedContent = settings.localized_footer_content;
+
+    if (localizedContent && localizedContent.length > 0) {
+      const exactMatch = localizedContent.find((c) => c.locale === currentLocale);
+      if (exactMatch) {
+        return exactMatch;
+      }
+
+      const langPart = currentLocale.split("_")[0];
+      if (langPart) {
+        const langMatch = localizedContent.find((c) => c.locale === langPart);
+        if (langMatch) {
+          return langMatch;
+        }
+      }
+    }
+
+    return settings;
+  }
 
   <template>
     {{#if @showFooter}}
@@ -14,16 +34,16 @@ export default class extends Component {
         <div class="flexbox">
           <div class="first-box">
             <div class="heading">
-              {{this.mainHeading}}
+              {{this.activeSettings.heading}}
             </div>
             <div class="blurb">
-              {{this.blurb}}
+              {{this.activeSettings.blurb}}
             </div>
           </div>
           <div class="second-box">
             <PluginOutlet @name="easy-footer-second-box">
               <div class="links">
-                {{#each settings.sections as |section|}}
+                {{#each this.activeSettings.sections as |section|}}
                   <div
                     class="list"
                     data-easyfooter-section={{dasherize section.text}}
@@ -58,7 +78,7 @@ export default class extends Component {
 
           <div class="third-box">
             <div class="footer-links">
-              {{#each settings.small_links as |link|}}
+              {{#each this.activeSettings.small_links as |link|}}
                 <a
                   class={{concatClass "small-link" link.css_class}}
                   data-easyfooter-small-link={{dasherize link.text}}
@@ -71,7 +91,7 @@ export default class extends Component {
             </div>
 
             <div class="social">
-              {{#each settings.social_links as |link|}}
+              {{#each this.activeSettings.social_links as |link|}}
                 <a
                   class="social-link"
                   data-easyfooter-social-link={{dasherize link.text}}

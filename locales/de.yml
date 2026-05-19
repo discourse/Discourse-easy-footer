@@ -7,6 +7,8 @@
 de:
   theme_metadata:
     settings:
+      localized_footer_content:
+        description: "Liste der lokalisierten Konfigurationen für den Footer-Inhalt. Das System versucht, das Gebietsschema des Benutzers (z. B. 'fr' oder 'en_US') mit dem hier definierten Feld 'locale' abzugleichen. Wenn keine Übereinstimmung gefunden wird, werden die unten stehenden Standardeinstellungen verwendet."
       heading:
         description: "Text für die Überschrift in der Fußzeile – du kannst zum Beispiel den Namen deiner Website verwenden – maximale Länge 25 Zeichen"
       blurb:
