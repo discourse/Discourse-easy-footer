@@ -1,12 +1,61 @@
 import Component from "@glimmer/component";
+import { dasherize } from "@ember/string";
 import PluginOutlet from "discourse/components/plugin-outlet";
 import concatClass from "discourse/helpers/concat-class";
 import icon from "discourse/helpers/d-icon";
-import dasherize from "discourse/helpers/dasherize";
+import I18nInstance from "discourse-i18n";
 
 export default class extends Component {
-  mainHeading = settings.heading;
-  blurb = settings.blurb;
+  get mainHeading() {
+    return (
+      this.translationFor(settings.heading_translations)?.text ||
+      settings.heading
+    );
+  }
+
+  get blurb() {
+    return (
+      this.translationFor(settings.blurb_translations)?.text || settings.blurb
+    );
+  }
+
+  get sections() {
+    return (settings.sections || []).map((section) => ({
+      ...section,
+      slug: dasherize(section.text),
+      text: this.localized(section, "text"),
+      title: this.localized(section, "title"),
+      links: (section.links || []).map((link) => this.localizedLink(link)),
+    }));
+  }
+
+  get smallLinks() {
+    return (settings.small_links || []).map((link) => this.localizedLink(link));
+  }
+
+  get socialLinks() {
+    return (settings.social_links || []).map((link) =>
+      this.localizedLink(link)
+    );
+  }
+
+  localizedLink(link) {
+    return {
+      ...link,
+      slug: dasherize(link.text),
+      text: this.localized(link, "text"),
+      title: this.localized(link, "title"),
+    };
+  }
+
+  translationFor(translations) {
+    const locale = I18nInstance.currentLocale();
+    return (translations || []).find((t) => t.locale === locale);
+  }
+
+  localized(obj, field) {
+    return this.translationFor(obj.translations)?.[field] || obj[field];
+  }
 
   <template>
     {{#if @showFooter}}
@@ -23,11 +72,8 @@ export default class extends Component {
           <div class="second-box">
             <PluginOutlet @name="easy-footer-second-box">
               <div class="links">
-                {{#each settings.sections as |section|}}
-                  <div
-                    class="list"
-                    data-easyfooter-section={{dasherize section.text}}
-                  >
+                {{#each this.sections as |section|}}
+                  <div class="list" data-easyfooter-section={{section.slug}}>
                     <span title={{section.title}}>
                       {{section.text}}
                     </span>
@@ -36,7 +82,7 @@ export default class extends Component {
                       {{#each section.links as |link|}}
                         <li
                           class="footer-section-link-wrapper"
-                          data-easyfooter-link={{dasherize link.text}}
+                          data-easyfooter-link={{link.slug}}
                         >
                           <a
                             class="footer-section-link"
@@ -58,10 +104,10 @@ export default class extends Component {
 
           <div class="third-box">
             <div class="footer-links">
-              {{#each settings.small_links as |link|}}
+              {{#each this.smallLinks as |link|}}
                 <a
                   class={{concatClass "small-link" link.css_class}}
-                  data-easyfooter-small-link={{dasherize link.text}}
+                  data-easyfooter-small-link={{link.slug}}
                   target={{link.target}}
                   href={{link.url}}
                 >
@@ -71,10 +117,10 @@ export default class extends Component {
             </div>
 
             <div class="social">
-              {{#each settings.social_links as |link|}}
+              {{#each this.socialLinks as |link|}}
                 <a
                   class="social-link"
-                  data-easyfooter-social-link={{dasherize link.text}}
+                  data-easyfooter-social-link={{link.slug}}
                   title={{link.title}}
                   target={{link.target}}
                   href={{link.url}}
