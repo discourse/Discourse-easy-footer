@@ -1,6 +1,6 @@
 heading:
   default: "This is a header"
-  max: 25
+  max: 60
 
 heading_translations:
   type: objects
@@ -66,11 +66,11 @@ heading_translations:
         type: string
         required: true
         validations:
-          max_length: 25
+          max_length: 60
 
 blurb:
   default: "Ius vitae ornatus at, ei mea sumo quot dicant. Ei tale democritum eos, in mea timeam accumsan forensibus. Ei his aperiam suavitate. Et debitis convenire sea, viris dictas latine."
-  max: 180
+  max: 300
 
 blurb_translations:
   type: objects
@@ -136,7 +136,7 @@ blurb_translations:
         type: string
         required: true
         validations:
-          max_length: 180
+          max_length: 300
 
 sections:
   type: objects

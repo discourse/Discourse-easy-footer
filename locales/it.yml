@@ -8,9 +8,9 @@ it:
   theme_metadata:
     settings:
       heading:
-        description: "Testo per l'intestazione nel piè di pagina: ad esempio puoi utilizzare il nome del tuo sito. Lunghezza massima 25 caratteri"
+        description: "Testo per l'intestazione nel piè di pagina: ad esempio puoi utilizzare il nome del tuo sito. Lunghezza massima 60 caratteri"
       blurb:
-        description: "Inserisci una breve descrizione della tua community: lunghezza massima 180 caratteri"
+        description: "Inserisci una breve descrizione della tua community: lunghezza massima 300 caratteri"
       sections:
         description: "Sezioni da visualizzare nel piè di pagina"
         schema:

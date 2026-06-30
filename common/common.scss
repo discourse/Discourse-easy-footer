@@ -21,8 +21,10 @@
     .heading {
       font-size: $font-up-2;
       font-weight: bold;
+      line-height: 1.15;
       margin-bottom: 0.5em;
       display: block;
+      overflow-wrap: anywhere;
     }
 
     .blurb {
