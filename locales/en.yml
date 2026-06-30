@@ -2,9 +2,9 @@ en:
   theme_metadata:
     settings:
       heading:
-        description: "Text for the heading in the footer - you can use your site name for example - Max length 25 characters"
+        description: "Text for the heading in the footer - you can use your site name for example - Max length 60 characters"
       blurb:
-        description: "Enter a short blurb about your community - Max length 180 characters"
+        description: "Enter a short blurb about your community - Max length 300 characters"
       sections:
         description: "Sections to be displayed in the footer"
         schema:
