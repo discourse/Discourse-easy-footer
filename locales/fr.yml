@@ -8,9 +8,9 @@ fr:
   theme_metadata:
     settings:
       heading:
-        description: "Texte du titre dans le pied de page (vous pouvez utiliser le nom de votre site, par exemple) : longueur maximale de 60 caractères"
+        description: "Texte du titre dans le pied de page (vous pouvez utiliser le nom de votre site, par exemple) : longueur maximale de 25 caractères"
       blurb:
-        description: "Saisissez un court texte de présentation de votre communauté : longueur maximale de 300 caractères"
+        description: "Saisissez un court texte de présentation de votre communauté : longueur maximale de 180 caractères"
       sections:
         description: "Sections à afficher dans le pied de page"
         schema:

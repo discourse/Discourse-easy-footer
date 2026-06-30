@@ -8,9 +8,9 @@ pl_PL:
   theme_metadata:
     settings:
       heading:
-        description: "Tekst nagłówka w stopce - możesz użyć na przykład nazwy swojej witryny - maksymalna długość 60 znaków"
+        description: "Tekst nagłówka w stopce - możesz użyć na przykład nazwy swojej witryny - maksymalna długość 25 znaków"
       blurb:
-        description: "Wprowadź krótki opis swojej społeczności - maksymalna długość 300 znaków"
+        description: "Wprowadź krótki opis swojej społeczności - maksymalna długość 180 znaków"
       sections:
         description: "Sekcje wyświetlane w stopce"
         schema:

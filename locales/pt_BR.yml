@@ -8,9 +8,9 @@ pt_BR:
   theme_metadata:
     settings:
       heading:
-        description: "Texto para o cabeçalho no rodapé: você pode usar o nome do seu site, por exemplo. O tamanho máximo é 60 caracteres"
+        description: "Texto para o cabeçalho no rodapé: você pode usar o nome do seu site, por exemplo. O tamanho máximo é 25 caracteres"
       blurb:
-        description: "Insira uma breve descrição sobre sua comunidade. O tamanho máximo é 300 caracteres"
+        description: "Insira uma breve descrição sobre sua comunidade. O tamanho máximo é 180 caracteres"
       sections:
         description: "Seções a serem exibidas no rodapé"
         schema:

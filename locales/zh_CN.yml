@@ -8,9 +8,9 @@ zh_CN:
   theme_metadata:
     settings:
       heading:
-        description: "页脚中标题的文本 – 例如，您可以使用您的网站名称 – 最多 60 个字符"
+        description: "页脚中标题的文本 – 例如，您可以使用您的网站名称 – 最多 25 个字符"
       blurb:
-        description: "输入关于您的社区的简短介绍 – 最多 300 个字符"
+        description: "输入关于您的社区的简短介绍 – 最多 180 个字符"
       sections:
         description: "页脚中显示的版块"
         schema:

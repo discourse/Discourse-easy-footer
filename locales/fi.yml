@@ -8,9 +8,9 @@ fi:
   theme_metadata:
     settings:
       heading:
-        description: "Alatunnisteen otsikkoteksti – voit käyttää esimerkiksi sivustosi nimeä – enimmäispituus on 60 merkkiä"
+        description: "Alatunnisteen otsikkoteksti – voit käyttää esimerkiksi sivustosi nimeä – enimmäispituus on 25 merkkiä"
       blurb:
-        description: "Kirjoita lyhyt kuvaus yhteisöstäsi – enimmäispituus on 300 merkkiä"
+        description: "Kirjoita lyhyt kuvaus yhteisöstäsi – enimmäispituus on 180 merkkiä"
       sections:
         description: "Alatunnisteessa näytettävät osiot"
         schema:

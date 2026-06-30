@@ -8,9 +8,9 @@ tr_TR:
   theme_metadata:
     settings:
       heading:
-        description: "Alt bilgideki başlık için metin, örneğin sitenizin adını kullanabilirsiniz. Maksimum uzunluk 60 karakter"
+        description: "Alt bilgideki başlık için metin, örneğin sitenizin adını kullanabilirsiniz. Maksimum uzunluk 25 karakter"
       blurb:
-        description: "Topluluğunuz hakkında kısa bir tanıtım girin. Maksimum uzunluk 300 karakter"
+        description: "Topluluğunuz hakkında kısa bir tanıtım girin. Maksimum uzunluk 180 karakter"
       sections:
         description: "Alt bilgide görüntülenecek bölümler"
         schema:

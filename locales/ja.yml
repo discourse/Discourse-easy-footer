@@ -8,9 +8,9 @@ ja:
   theme_metadata:
     settings:
       heading:
-        description: "フッターの見出しのテキスト - サイト名などを使用できます - 最大 60 文字"
+        description: "フッターの見出しのテキスト - サイト名などを使用できます - 最大 25 文字"
       blurb:
-        description: "コミュニティーについての短い紹介文を挿入します - 最大 300 文字"
+        description: "コミュニティーについての短い紹介文を挿入します - 最大 180 文字"
       sections:
         description: "フッターに表示されるセクション"
         schema:
