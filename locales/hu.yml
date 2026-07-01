@@ -8,9 +8,9 @@ hu:
   theme_metadata:
     settings:
       heading:
-        description: "Szöveg a láblécben lévő fejléchez - használhatja például az oldal nevét - Max. 25 karakter"
+        description: "Szöveg a láblécben lévő fejléchez - használhatja például az oldal nevét - Max. 60 karakter"
       blurb:
-        description: "Írjon be egy rövid összefoglalót a közösségről - Max. 180 karakter"
+        description: "Írjon be egy rövid összefoglalót a közösségről - Max. 300 karakter"
       sections:
         description: "A láblécben megjelenítendő részlegek"
         schema:

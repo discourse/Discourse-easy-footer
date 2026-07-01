@@ -8,9 +8,9 @@ es:
   theme_metadata:
     settings:
       heading:
-        description: "Texto para el encabezado en el pie de página (puedes usar el nombre de tu sitio, por ejemplo). Longitud máxima: 25 caracteres."
+        description: "Texto para el encabezado en el pie de página (puedes usar el nombre de tu sitio, por ejemplo). Longitud máxima: 60 caracteres."
       blurb:
-        description: "Introduce una breve reseña sobre tu comunidad: longitud máxima de 180 caracteres"
+        description: "Introduce una breve reseña sobre tu comunidad: longitud máxima de 300 caracteres"
       sections:
         description: "Secciones que se mostrarán en el pie de página"
         schema:

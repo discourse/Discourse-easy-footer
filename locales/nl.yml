@@ -8,9 +8,9 @@ nl:
   theme_metadata:
     settings:
       heading:
-        description: "Tekst voor de kop in de voettekst - je kunt bijvoorbeeld je sitenaam gebruiken - maximaal 25 tekens"
+        description: "Tekst voor de kop in de voettekst - je kunt bijvoorbeeld je sitenaam gebruiken - maximaal 60 tekens"
       blurb:
-        description: "Voer een korte tekst in over je community - maximaal 180 tekens"
+        description: "Voer een korte tekst in over je community - maximaal 300 tekens"
       sections:
         description: "Secties om weer te geven in de voettekst"
         schema:
