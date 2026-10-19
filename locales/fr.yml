@@ -8,9 +8,9 @@ fr:
   theme_metadata:
     settings:
       heading:
-        description: "Texte du titre dans le pied de page (vous pouvez utiliser le nom de votre site, par exemple) : longueur maximale de 60 caractères"
+        description: "Texte du titre dans le pied de page (vous pouvez utiliser le nom de votre site, par exemple) : longueur maximale de 60 caractères"
       blurb:
-        description: "Saisissez un court texte de présentation de votre communauté : longueur maximale de 300 caractères"
+        description: "Saisissez un court texte de présentation de votre communauté : longueur maximale de 300 caractères"
       sections:
         description: "Sections à afficher dans le pied de page"
         schema:
@@ -19,8 +19,8 @@ fr:
               label: Texte
               description: Texte à afficher pour la section
             title:
-              label: Titre
-              description: L'attribut titre de la section
+              label: Info-bulle
+              description: L'attribut title de la section
             links:
               text:
                 label: Texte
@@ -30,15 +30,15 @@ fr:
                 description: L'URL vers laquelle pointe le lien
               target:
                 label: Cible
-                description: L'attribut cible du lien
+                description: L'attribut target du lien
               title:
-                label: Titre
-                description: L'attribut titre du lien
+                label: Info-bulle
+                description: L'attribut title du lien
               referrer_policy:
-                label: Politique de référencement
+                label: Politique de référent
                 description: L'attribut referrerpolicy du lien
       small_links:
-        description: "Petits liens en bas du pied de page, tels que Conditions d'utilisation et Confidentialité"
+        description: "Petits liens en bas du pied de page, comme les conditions d'utilisation et la politique de confidentialité"
         schema:
           properties:
             text:
@@ -49,7 +49,10 @@ fr:
               description: L'URL vers laquelle pointe le lien
             target:
               label: Cible
-              description: L'attribut cible du lien
+              description: L'attribut target du lien
+            css_class:
+              label: Classe CSS
+              description: Classe CSS supplémentaire facultative à appliquer au lien (p. ex. 'custom-class')
       social_links:
         description: "Liens de réseaux sociaux que vous souhaitez ajouter au pied de page"
         schema:
@@ -58,14 +61,14 @@ fr:
               label: Texte
               description: Texte à afficher pour le lien
             title:
-              label: Titre
-              description: L'attribut titre du lien
+              label: Info-bulle
+              description: L'attribut title du lien
             url:
               label: URL
               description: L'URL vers laquelle pointe le lien
             target:
               label: Cible
-              description: L'attribut cible du lien
+              description: L'attribut target du lien
             icon_name:
               label: Nom de l'icône
               description: Nom de l'icône FontAwesome 6 (les icônes de marque nécessitent un préfixe « fab- »)
